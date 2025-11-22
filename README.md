@@ -38,6 +38,19 @@
 
 ---
 
+<div align="center">
+
+### ✨ Welcome to My Dynamic Profile ✨
+
+This profile features **3D design** and **auto-updating statistics** powered by GitHub Actions!  
+Stats refresh daily at 00:00 UTC to show the latest data.
+
+📊 **Live Stats** • 🎨 **Modern Design** • 🤖 **Automated Updates**
+
+</div>
+
+---
+
 ## 👨‍💻 About Me
 
 ```javascript
@@ -308,6 +321,13 @@ graph LR
 🤖 **Shan-D Superadvanced:** Available on Telegram  
 🚀 **NexusAi Pro:** [@NexusAiProbot](https://t.me/NexusAiProbot)
 
+### 📅 Recent Highlights
+
+🎉 **2024** - Launched multiple AI-powered Telegram bots  
+🚀 **2024** - Built full-stack applications with modern tech stack  
+🤖 **2024** - Developed advanced AI assistant with multimodal capabilities  
+💼 **Active** - Contributing to open-source AI/ML projects
+
 </div>
 
 ---
@@ -341,6 +361,10 @@ graph LR
   **✨ "Building the future, one commit at a time" ✨**
   
   <sub>💡 **Always open to collaboration on exciting AI and full-stack projects!**</sub>
+  
+  ---
+  
+  <sub>🤖 This profile features automated updates powered by GitHub Actions | Last updated: Daily at 00:00 UTC</sub>
   
   ![](https://komarev.com/ghpvc/?username=DenxVil&color=blueviolet&style=flat-square&label=Thanks+for+visiting!)
   
