@@ -6,13 +6,8 @@
   <img src="./assets/hero-depth-base.svg" alt="3D Hero Base Layer" width="100%" />
 </picture>
 
-<div style="position: relative; margin-top: -300px;">
-  <img src="./assets/hero-parallax-rings.svg" alt="Parallax Ring System" width="100%" style="opacity: 0.8;" />
-</div>
-
-<div style="position: relative; margin-top: -200px;">
-  <img src="./assets/hero-floating-cubes.svg" alt="Floating 3D Elements" width="100%" style="opacity: 0.9;" />
-</div>
+<img src="./assets/hero-parallax-rings.svg" alt="Parallax Ring System" width="100%" />
+<img src="./assets/hero-floating-cubes.svg" alt="Floating 3D Elements" width="100%" />
 
 <br>
 
