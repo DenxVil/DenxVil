@@ -1,0 +1,170 @@
+name: Update README with Dynamic GitHub Stats (3D Profile)
+
+# 🔄 Automated Daily Updates for 3D Profile README
+# This workflow regenerates dynamic content sections including:
+# - GitHub statistics SVGs (stats.svg, top-langs.svg)
+# - Top repositories markdown
+# - Updates content between <!-- DYNAMIC_START --> and <!-- DYNAMIC_END --> markers
+
+on:
+  # ⏰ Schedule: Run daily at 00:00 UTC
+  schedule:
+    - cron: '0 0 * * *'
+  
+  # 🚀 Run on push to main branch (for testing)
+  push:
+    branches:
+      - main
+      - redesign/3d-profile
+  
+  # 🔧 Allow manual trigger with dry-run option
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Run in dry-run mode (no commits)'
+        required: false
+        default: 'false'
+        type: choice
+        options:
+          - 'true'
+          - 'false'
+
+# Required permissions for committing changes
+permissions:
+  contents: write
+
+jobs:
+  update-dynamic-content:
+    name: 🎨 Update 3D Profile Dynamic Sections
+    runs-on: ubuntu-latest
+    
+    steps:
+      # 1️⃣ Checkout the repository
+      - name: 📦 Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      # 2️⃣ Set up Python environment
+      - name: 🐍 Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      # 3️⃣ Install Python dependencies
+      - name: 📥 Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then
+            pip install -r requirements.txt
+          else
+            echo "⚠️  No requirements.txt found, installing basic dependencies..."
+            pip install requests
+          fi
+      
+      # 4️⃣ Check if generation script exists
+      - name: 🔍 Check for generation script
+        id: check_script
+        run: |
+          if [ -f "scripts/generate_readme_assets.sh" ]; then
+            echo "script_exists=true" >> $GITHUB_OUTPUT
+            echo "✅ Generation script found"
+          else
+            echo "script_exists=false" >> $GITHUB_OUTPUT
+            echo "⚠️  Generation script not found, will use fallback"
+          fi
+      
+      # 5️⃣ Run the generation script if it exists
+      - name: 🎨 Generate README assets
+        if: steps.check_script.outputs.script_exists == 'true'
+        run: |
+          chmod +x scripts/generate_readme_assets.sh
+          ./scripts/generate_readme_assets.sh
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      
+      # 6️⃣ Fallback: Run Python update script directly (if shell script is missing)
+      # Note: This is a fallback only. The shell script (generate_readme_assets.sh)
+      # is the preferred entry point as it handles multiple scenarios.
+      - name: 🔄 Update dynamic content (Direct Python fallback)
+        if: steps.check_script.outputs.script_exists == 'false'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if [ -f "scripts/update_readme.py" ]; then
+            echo "ℹ️  Shell script not found, calling Python script directly..."
+            if [ "${{ github.event.inputs.dry_run }}" == "true" ]; then
+              python scripts/update_readme.py --dry-run
+            else
+              python scripts/update_readme.py
+            fi
+          else
+            echo "⚠️  No update scripts found. Skipping update."
+            echo "💡 To enable automated updates, add scripts/generate_readme_assets.sh (preferred)"
+            echo "   or scripts/update_readme.py (direct Python approach)"
+          fi
+      
+      # 7️⃣ Check for changes
+      - name: 🔍 Check for changes
+        id: check_changes
+        run: |
+          if [[ -n $(git status --porcelain) ]]; then
+            echo "changes=true" >> $GITHUB_OUTPUT
+            echo "✅ Changes detected"
+            git status --short
+          else
+            echo "changes=false" >> $GITHUB_OUTPUT
+            echo "ℹ️  No changes detected"
+          fi
+      
+      # 8️⃣ Commit and push changes
+      - name: 💾 Commit and push changes
+        if: steps.check_changes.outputs.changes == 'true' && github.event.inputs.dry_run != 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          # Only commit expected generated files (README.md and SVG assets)
+          git add README.md assets/stats.svg assets/top-langs.svg
+          git commit -m "🤖 Auto-update 3D Profile README with latest GitHub stats [skip ci]"
+          git push
+      
+      # 9️⃣ Generate workflow summary
+      - name: 📊 Generate summary
+        run: |
+          echo "# 📊 3D Profile README Update Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "## 🎨 3D Profile Dynamic Content" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          
+          if [ "${{ steps.check_changes.outputs.changes }}" == "true" ]; then
+            echo "✅ **Status:** Dynamic content updated successfully!" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            
+            if [ "${{ github.event.inputs.dry_run }}" == "true" ]; then
+              echo "⚠️ **Mode:** Dry run - No changes were committed." >> $GITHUB_STEP_SUMMARY
+            else
+              echo "📝 **Mode:** Changes committed and pushed to repository." >> $GITHUB_STEP_SUMMARY
+            fi
+          else
+            echo "ℹ️ **Status:** No changes detected - README is up to date." >> $GITHUB_STEP_SUMMARY
+          fi
+          
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### 📋 Details" >> $GITHUB_STEP_SUMMARY
+          echo "- **Workflow:** ${{ github.workflow }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Triggered by:** ${{ github.event_name }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Branch:** ${{ github.ref_name }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Run time:** $(date -u '+%Y-%m-%d %H:%M:%S UTC')" >> $GITHUB_STEP_SUMMARY
+          echo "- **Script exists:** ${{ steps.check_script.outputs.script_exists }}" >> $GITHUB_STEP_SUMMARY
+          
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### 🎯 Updated Components" >> $GITHUB_STEP_SUMMARY
+          echo "- 📊 GitHub Statistics SVG (stats.svg)" >> $GITHUB_STEP_SUMMARY
+          echo "- 💻 Top Languages SVG (top-langs.svg)" >> $GITHUB_STEP_SUMMARY
+          echo "- 🌟 Top Repositories Section" >> $GITHUB_STEP_SUMMARY
+          echo "- 📈 Dynamic Content between DYNAMIC_START/DYNAMIC_END markers" >> $GITHUB_STEP_SUMMARY
+          
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "---" >> $GITHUB_STEP_SUMMARY
+          echo "*Next scheduled run: Daily at 00:00 UTC*" >> $GITHUB_STEP_SUMMARY
