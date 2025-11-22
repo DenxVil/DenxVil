@@ -1,14 +1,52 @@
 <div align="center">
-  <img src="https://github.com/DenxVil.png" alt="DenxVil Avatar" width="150" height="150" style="border-radius: 50%;">
-  <!-- Replace with custom logo: <img src="./img/Denvil.png" alt="DenxVil Logo" width="150" height="150" style="border-radius: 50%;"> -->
   
-  # 🚀 Welcome to DenxVil's Universe
+  <!-- 3D Hero Banner -->
+  <img src="./assets/3d-hero.svg" alt="DenxVil - AI Engineer & Full Stack Developer" width="100%" />
   
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=00D9FF&center=true&vCenter=true&width=500&lines=AI+Engineer+%26+Full+Stack+Developer;Building+Intelligent+Solutions;Creating+Amazing+Experiences;Always+Learning+%26+Growing" alt="Typing SVG" />
+  <!-- GitHub Pro Badge -->
+  <p>
+    <a href="https://github.com/DenxVil">
+      <img src="https://img.shields.io/badge/GitHub-PRO-6e5494?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Pro Badge" />
+    </a>
+    <a href="https://github.com/DenxVil">
+      <img src="./assets/pro-badge.svg" alt="GitHub Pro" height="35" />
+    </a>
+  </p>
   
+  <!-- Profile Stats -->
   [![Profile Views](https://komarev.com/ghpvc/?username=DenxVil&color=blueviolet&style=flat-square&label=Profile+Views)](https://github.com/DenxVil)
   [![GitHub followers](https://img.shields.io/github/followers/DenxVil?label=Followers&style=flat-square&color=blue)](https://github.com/DenxVil)
   [![GitHub stars](https://img.shields.io/github/stars/DenxVil?label=Stars&style=flat-square&color=yellow)](https://github.com/DenxVil)
+  
+  <!-- Call to Action Buttons -->
+  <p>
+    <a href="https://github.com/DenxVil?tab=followers">
+      <img src="https://img.shields.io/badge/Follow-DenxVil-00d9ff?style=for-the-badge&logo=github" alt="Follow on GitHub" />
+    </a>
+    <a href="https://t.me/xDenvil_bot">
+      <img src="https://img.shields.io/badge/Connect-Telegram-2CA5E0?style=for-the-badge&logo=telegram" alt="Connect on Telegram" />
+    </a>
+    <a href="mailto:NexusAisupport@gmail.com">
+      <img src="https://img.shields.io/badge/Hire_Me-Email-D14836?style=for-the-badge&logo=gmail" alt="Hire Me" />
+    </a>
+  </p>
+  
+  <!-- Typing Animation -->
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=00D9FF&center=true&vCenter=true&width=600&lines=AI+Engineer+%26+Full+Stack+Developer;Building+Intelligent+AI+Solutions;Creating+Amazing+User+Experiences;Open+Source+Contributor;Always+Learning+%26+Growing" alt="Typing Animation - AI Engineer & Full Stack Developer" />
+  
+</div>
+
+---
+
+<div align="center">
+
+### ✨ Welcome to My Dynamic Profile ✨
+
+This profile features **3D design** and **auto-updating statistics** powered by GitHub Actions!  
+Stats refresh daily at 00:00 UTC to show the latest data.
+
+📊 **Live Stats** • 🎨 **Modern Design** • 🤖 **Automated Updates**
+
 </div>
 
 ---
@@ -203,12 +241,13 @@ const denvil = {
 
 ---
 
-## 📊 GitHub Analytics
+<!-- DYNAMIC_START -->
+## 📊 Live GitHub Statistics
 
 <div align="center">
   
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=DenxVil&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true"/>
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=DenxVil&layout=compact&langs_count=7&theme=tokyonight"/>
+  <img src="./assets/stats.svg" alt="GitHub Statistics - Commits, Repos, Followers" />
+  <img src="./assets/top-langs.svg" alt="Top Programming Languages" />
   
 </div>
 
@@ -220,9 +259,21 @@ const denvil = {
 
 <div align="center">
   
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=DenxVil&theme=tokyo-night&hide_border=true&area=true" width="100%">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=DenxVil&theme=tokyo-night&hide_border=true&area=true" width="100%" alt="GitHub Activity Graph">
   
 </div>
+
+---
+
+## 🌟 Top Repositories
+
+<div align="center">
+
+*Top repositories will be dynamically updated by the GitHub Actions workflow*
+
+</div>
+
+<!-- DYNAMIC_END -->
 
 ---
 
@@ -270,6 +321,13 @@ graph LR
 🤖 **Shan-D Superadvanced:** Available on Telegram  
 🚀 **NexusAi Pro:** [@NexusAiProbot](https://t.me/NexusAiProbot)
 
+### 📅 Recent Highlights
+
+🎉 **2024** - Launched multiple AI-powered Telegram bots  
+🚀 **2024** - Built full-stack applications with modern tech stack  
+🤖 **2024** - Developed advanced AI assistant with multimodal capabilities  
+💼 **Active** - Contributing to open-source AI/ML projects
+
 </div>
 
 ---
@@ -303,6 +361,10 @@ graph LR
   **✨ "Building the future, one commit at a time" ✨**
   
   <sub>💡 **Always open to collaboration on exciting AI and full-stack projects!**</sub>
+  
+  ---
+  
+  <sub>🤖 This profile features automated updates powered by GitHub Actions | Last updated: Daily at 00:00 UTC</sub>
   
   ![](https://komarev.com/ghpvc/?username=DenxVil&color=blueviolet&style=flat-square&label=Thanks+for+visiting!)
   
