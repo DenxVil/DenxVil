@@ -422,68 +422,155 @@ graph LR
 </tr>
 </table>
 
+<br>
+
 ---
 
 ## 📫 Connect & Collaborate
 
 <div align="center">
 
+<img src="./assets/panel-depth.svg" alt="Connect Panel" width="70%" />
+
+<br>
+
 ### 🤝 Let's Build Something Amazing Together!
 
-[![Telegram](https://img.shields.io/badge/Telegram-@xDenvil_bot-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/xDenvil_bot)
-[![Email](https://img.shields.io/badge/Email-NexusAisupport@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:NexusAisupport@gmail.com)
-[![GitHub](https://img.shields.io/badge/GitHub-DenxVil-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/DenxVil)
-[![Portfolio](https://img.shields.io/badge/Portfolio-DenxVil.github.io-FF5722?style=for-the-badge&logo=google-chrome&logoColor=white)](https://denxvil.github.io)
+<p>
+  <a href="https://t.me/xDenvil_bot">
+    <img src="https://img.shields.io/badge/💬_Telegram-@xDenvil__bot-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram" />
+  </a>
+  <a href="mailto:NexusAisupport@gmail.com">
+    <img src="https://img.shields.io/badge/📧_Email-NexusAisupport@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
+  </a>
+  <a href="https://github.com/DenxVil">
+    <img src="https://img.shields.io/badge/⭐_GitHub-DenxVil-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+  </a>
+  <a href="https://denxvil.github.io">
+    <img src="https://img.shields.io/badge/🌐_Portfolio-DenxVil.github.io-FF5722?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Portfolio" />
+  </a>
+</p>
 
-### 💬 Try My AI Assistants:
-🤖 **Shan-D Superadvanced:** Available on Telegram  
-🚀 **NexusAi Pro:** [@NexusAiProbot](https://t.me/NexusAiProbot)
+<br>
 
-### 📅 Recent Highlights
+### 💬 Try My AI Assistants
 
-🎉 **2024** - Launched multiple AI-powered Telegram bots  
-🚀 **2024** - Built full-stack applications with modern tech stack  
-🤖 **2024** - Developed advanced AI assistant with multimodal capabilities  
-💼 **Active** - Contributing to open-source AI/ML projects
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="https://img.shields.io/badge/Shan--D-Superadvanced-00d9ff?style=for-the-badge&logo=telegram" alt="Shan-D" /><br>
+      <b>Ultra-Human AI Assistant</b><br>
+      <sub>Advanced conversational AI with emotional intelligence</sub>
+    </td>
+    <td align="center" width="50%">
+      <a href="https://t.me/NexusAiProbot">
+        <img src="https://img.shields.io/badge/NexusAi_Pro-@NexusAiProbot-2CA5E0?style=for-the-badge&logo=telegram" alt="NexusAi Pro" />
+      </a><br>
+      <b>Multi-Provider AI Platform</b><br>
+      <sub>Sequential AI with smart fallback system</sub>
+    </td>
+  </tr>
+</table>
+
+<br>
+
+### 📅 Recent Highlights & Achievements
+
+| Year | Achievement |
+|:---:|:---|
+| 🎉 **2024** | Launched multiple AI-powered Telegram bots with thousands of users |
+| 🚀 **2024** | Built full-stack applications using modern tech stack (React, Node.js, TypeScript) |
+| 🤖 **2024** | Developed advanced AI assistant with multimodal capabilities (text, image, audio) |
+| 💼 **2024** | Achieved GitHub Pro status and expanded open-source contributions |
+| 🌟 **Active** | Continuously improving AI/ML projects and learning new technologies |
 
 </div>
 
+<br>
+
 ---
 
+<br>
+
+## 🌟 Fun Facts & Contribution
+
 <div align="center">
-  
-  ### 🌟 Fun Facts About Me
-  
-  ```
-  🧠 Building AI that understands humans better than humans understand themselves
-  🌍 Passionate about making AI accessible to everyone
-  🚀 Always excited about the next breakthrough in technology
-  ☕ Powered by coffee and curiosity
-  🎮 When not coding, you'll find me exploring new tech or gaming
-  ```
-  
-  ---
-  
-  <img src="https://raw.githubusercontent.com/platane/snk/output/github-contribution-grid-snake-dark.svg" width="100%">
-  
-  ---
-  
-  ### 💝 Show Some Love
-  
-  ⭐ **Star my repositories** if you find them interesting!  
-  🍴 **Fork and contribute** to make them even better!  
-  📢 **Share with others** who might benefit from these projects!
-  
-  ---
-  
-  **✨ "Building the future, one commit at a time" ✨**
-  
-  <sub>💡 **Always open to collaboration on exciting AI and full-stack projects!**</sub>
-  
-  ---
-  
-  <sub>🤖 This profile features automated updates powered by GitHub Actions | Last updated: Daily at 00:00 UTC</sub>
-  
-  ![](https://komarev.com/ghpvc/?username=DenxVil&color=blueviolet&style=flat-square&label=Thanks+for+visiting!)
-  
+
+### 🎭 About Me
+
+<table>
+  <tr>
+    <td align="center">🧠</td>
+    <td><b>Mission:</b> Building AI that understands humans better than humans understand themselves</td>
+  </tr>
+  <tr>
+    <td align="center">🌍</td>
+    <td><b>Vision:</b> Making AI accessible and beneficial to everyone, everywhere</td>
+  </tr>
+  <tr>
+    <td align="center">🚀</td>
+    <td><b>Passion:</b> Always excited about the next breakthrough in AI and technology</td>
+  </tr>
+  <tr>
+    <td align="center">☕</td>
+    <td><b>Fuel:</b> Powered by coffee, curiosity, and the desire to innovate</td>
+  </tr>
+  <tr>
+    <td align="center">🎮</td>
+    <td><b>Off-duty:</b> Exploring cutting-edge tech, gaming, or brainstorming the next big idea</td>
+  </tr>
+  <tr>
+    <td align="center">🎯</td>
+    <td><b>Motto:</b> "Code with purpose, build with passion, innovate without limits"</td>
+  </tr>
+</table>
+
+<br>
+
+---
+
+<img src="https://raw.githubusercontent.com/platane/snk/output/github-contribution-grid-snake-dark.svg" width="100%" alt="Contribution Snake Animation">
+
+---
+
+<br>
+
+### 💝 Show Some Love
+
+<p>
+  <img src="https://img.shields.io/badge/⭐_Star-My_Repos-FFD700?style=for-the-badge" alt="Star" />
+  <img src="https://img.shields.io/badge/🍴_Fork-Contribute-32CD32?style=for-the-badge" alt="Fork" />
+  <img src="https://img.shields.io/badge/📢_Share-Help_Others-FF6347?style=for-the-badge" alt="Share" />
+</p>
+
+⭐ **Star my repositories** if you find them interesting and useful!  
+🍴 **Fork and contribute** to make them even better - PRs are always welcome!  
+📢 **Share with others** who might benefit from these AI and development projects!
+
+<br>
+
+---
+
+<br>
+
+### ✨ "Building the future, one commit at a time" ✨
+
+<sub>💡 **Always open to collaboration on exciting AI, ML, and full-stack projects!**</sub>
+
+<br>
+
+---
+
+<br>
+
+<sub>🤖 **This 3D profile features automated updates powered by GitHub Actions**</sub>  
+<sub>📊 **Dynamic content refreshes daily at 00:00 UTC**</sub>  
+<sub>🎨 **Modern 3D design with layered SVG assets for depth and visual appeal**</sub>
+
+<br>
+
+<img src="https://komarev.com/ghpvc/?username=DenxVil&color=blueviolet&style=for-the-badge&label=Thanks+for+visiting!" alt="Profile Views" />
+
+<br><br>
+
 </div>
