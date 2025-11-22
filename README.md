@@ -8,6 +8,8 @@
     <a href="https://github.com/DenxVil">
       <img src="https://img.shields.io/badge/GitHub-PRO-6e5494?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Pro Badge" />
     </a>
+  </p>
+  <p>
     <a href="https://github.com/DenxVil">
       <img src="./assets/pro-badge.svg" alt="GitHub Pro" height="35" />
     </a>
@@ -40,12 +42,9 @@
 
 <div align="center">
 
-### ✨ Welcome to My Dynamic Profile ✨
+### ✨ Welcome to My  Profile ✨
 
-This profile features **3D design** and **auto-updating statistics** powered by GitHub Actions!  
-Stats refresh daily at 00:00 UTC to show the latest data.
 
-📊 **Live Stats** • 🎨 **Modern Design** • 🤖 **Automated Updates**
 
 </div>
 
