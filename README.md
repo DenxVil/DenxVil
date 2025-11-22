@@ -7,24 +7,25 @@
 </picture>
 
 <img src="./assets/hero-parallax-rings.svg" alt="Parallax Ring System" width="100%" />
+
 <img src="./assets/hero-floating-cubes.svg" alt="Floating 3D Elements" width="100%" />
 
 <br>
 
 <!-- 🌟 PROMINENT GITHUB PRO HIGHLIGHT -->
-<img src="./assets/pro-core-orbit.svg" alt="GitHub Pro Core Orbit" height="220" />
+<img src="./assets/pro-core-orbit.svg" alt="GitHub Pro Core Orbit" width="280" />
 
 <p>
   <a href="https://github.com/DenxVil">
     <img src="https://img.shields.io/badge/GitHub-PRO-6e5494?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Pro Badge" />
   </a>
   <a href="https://github.com/DenxVil">
-    <img src="./assets/pro-badge.svg" alt="GitHub Pro Enhanced" height="28" />
+    <img src="./assets/pro-badge.svg" alt="GitHub Pro Enhanced" width="120" />
   </a>
 </p>
 
 <!-- ✨ Title with Glow Effect -->
-<img src="./assets/title-glow.svg" alt="Title Glow" width="70%" />
+<img src="./assets/title-glow.svg" alt="Title Glow" width="80%" />
 
 <h1>
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=32&duration=3000&pause=1000&color=00D9FF&center=true&vCenter=true&width=800&lines=DenxVil+%E2%9C%A8;AI+Engineer+%26+Full+Stack+Developer;Building+Intelligent+AI+Solutions;Creating+Ultra-Human+Experiences;Open+Source+Contributor;Always+Learning+%26+Innovating" alt="Typing Animation" />
@@ -70,7 +71,7 @@
 ## 👨‍💻 About Me
 
 <div align="center">
-  <img src="./assets/panel-depth.svg" alt="Panel Depth" width="90%" />
+  <img src="./assets/panel-depth.svg" alt="Panel Depth" width="80%" />
 </div>
 
 ```javascript
@@ -120,10 +121,10 @@ const DenxVil = {
   
   <table>
     <tr>
-      <td align="center">🧠<br><b>Advanced AI</b><br>Multi-modal systems</td>
-      <td align="center">🤖<br><b>Smart Bots</b><br>Ultra-human assistants</td>
-      <td align="center">🌐<br><b>Full Stack</b><br>Modern web apps</td>
-      <td align="center">📊<br><b>AI Integration</b><br>Seamless experiences</td>
+      <td align="center" width="25%">🧠<br><b>Advanced AI</b><br>Multi-modal systems</td>
+      <td align="center" width="25%">🤖<br><b>Smart Bots</b><br>Ultra-human assistants</td>
+      <td align="center" width="25%">🌐<br><b>Full Stack</b><br>Modern web apps</td>
+      <td align="center" width="25%">📊<br><b>AI Integration</b><br>Seamless experiences</td>
     </tr>
   </table>
   
@@ -137,7 +138,7 @@ const DenxVil = {
 
 <div align="center">
 
-<img src="./assets/stack-orbit.svg" alt="Tech Stack Orbital System" width="500" />
+<img src="./assets/stack-orbit.svg" alt="Tech Stack Orbital System" width="60%" />
 
 <br><br>
 
@@ -175,35 +176,45 @@ const DenxVil = {
 
 ### 🤖 AI & Machine Learning
 
-![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white)
-![HuggingFace](https://img.shields.io/badge/🤗_Hugging_Face-FFD21E?style=for-the-badge)
-![Google Gemini](https://img.shields.io/badge/Google_Gemini-4285F4?style=for-the-badge&logo=google&logoColor=white)
-![Perplexity](https://img.shields.io/badge/Perplexity-20B2AA?style=for-the-badge)
+<p align="center">
+  <img src="https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white" alt="OpenAI" />
+  <img src="https://img.shields.io/badge/🤗_Hugging_Face-FFD21E?style=for-the-badge" alt="HuggingFace" />
+  <img src="https://img.shields.io/badge/Google_Gemini-4285F4?style=for-the-badge&logo=google&logoColor=white" alt="Google Gemini" />
+  <img src="https://img.shields.io/badge/Perplexity-20B2AA?style=for-the-badge" alt="Perplexity" />
+</p>
 
 ### 🎨 Frontend & Styling
 
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
-![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+<p align="center">
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
+  <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" />
+</p>
 
 ### 🗄️ Backend & Databases
 
-![Express.js](https://img.shields.io/badge/Express.js-404D59?style=for-the-badge)
-![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
+<p align="center">
+  <img src="https://img.shields.io/badge/Express.js-404D59?style=for-the-badge" alt="Express.js" />
+  <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB" />
+</p>
 
 ### ☁️ DevOps & Cloud
 
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![Azure](https://img.shields.io/badge/Microsoft_Azure-0089D0?style=for-the-badge&logo=microsoft-azure&logoColor=white)
-![Heroku](https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white)
+<p align="center">
+  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" />
+  <img src="https://img.shields.io/badge/Microsoft_Azure-0089D0?style=for-the-badge&logo=microsoft-azure&logoColor=white" alt="Azure" />
+  <img src="https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white" alt="Heroku" />
+</p>
 
 ### 🛠️ Tools & Platforms
 
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)
-![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)
-![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
+<p align="center">
+  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git" />
+  <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+  <img src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram" />
+  <img src="https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white" alt="VS Code" />
+</p>
 
 </div>
 
@@ -333,6 +344,7 @@ const DenxVil = {
   <!-- Note: stats.svg and top-langs.svg are dynamically generated by GitHub Actions workflow -->
   <!-- Placeholders are shown until first workflow run completes -->
   <img src="./assets/stats.svg" alt="GitHub Statistics - Commits, Repos, Followers" />
+  
   <img src="./assets/top-langs.svg" alt="Top Programming Languages" />
   
 </div>
@@ -369,7 +381,7 @@ const DenxVil = {
 
 <div align="center">
 
-<img src="./assets/focus-hex-grid.svg" alt="Focus Hexagonal Grid" width="600" />
+<img src="./assets/focus-hex-grid.svg" alt="Focus Hexagonal Grid" width="70%" />
 
 <br>
 
@@ -427,7 +439,7 @@ graph LR
 
 <div align="center">
 
-<img src="./assets/panel-depth.svg" alt="Connect Panel" width="70%" />
+<img src="./assets/panel-depth.svg" alt="Connect Panel" width="80%" />
 
 <br>
 
@@ -497,28 +509,28 @@ graph LR
 
 <table>
   <tr>
-    <td align="center">🧠</td>
-    <td><b>Mission:</b> Building AI that understands humans better than humans understand themselves</td>
+    <td align="center" width="10%">🧠</td>
+    <td width="90%"><b>Mission:</b> Building AI that understands humans better than humans understand themselves</td>
   </tr>
   <tr>
-    <td align="center">🌍</td>
-    <td><b>Vision:</b> Making AI accessible and beneficial to everyone, everywhere</td>
+    <td align="center" width="10%">🌍</td>
+    <td width="90%"><b>Vision:</b> Making AI accessible and beneficial to everyone, everywhere</td>
   </tr>
   <tr>
-    <td align="center">🚀</td>
-    <td><b>Passion:</b> Always excited about the next breakthrough in AI and technology</td>
+    <td align="center" width="10%">🚀</td>
+    <td width="90%"><b>Passion:</b> Always excited about the next breakthrough in AI and technology</td>
   </tr>
   <tr>
-    <td align="center">☕</td>
-    <td><b>Fuel:</b> Powered by coffee, curiosity, and the desire to innovate</td>
+    <td align="center" width="10%">☕</td>
+    <td width="90%"><b>Fuel:</b> Powered by coffee, curiosity, and the desire to innovate</td>
   </tr>
   <tr>
-    <td align="center">🎮</td>
-    <td><b>Off-duty:</b> Exploring cutting-edge tech, gaming, or brainstorming the next big idea</td>
+    <td align="center" width="10%">🎮</td>
+    <td width="90%"><b>Off-duty:</b> Exploring cutting-edge tech, gaming, or brainstorming the next big idea</td>
   </tr>
   <tr>
-    <td align="center">🎯</td>
-    <td><b>Motto:</b> "Code with purpose, build with passion, innovate without limits"</td>
+    <td align="center" width="10%">🎯</td>
+    <td width="90%"><b>Motto:</b> "Code with purpose, build with passion, innovate without limits"</td>
   </tr>
 </table>
 
@@ -534,7 +546,7 @@ graph LR
 
 ### 💝 Show Some Love
 
-<p>
+<p align="center">
   <img src="https://img.shields.io/badge/⭐_Star-My_Repos-FFD700?style=for-the-badge" alt="Star" />
   <img src="https://img.shields.io/badge/🍴_Fork-Contribute-32CD32?style=for-the-badge" alt="Fork" />
   <img src="https://img.shields.io/badge/📢_Share-Help_Others-FF6347?style=for-the-badge" alt="Share" />
