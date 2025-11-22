@@ -1,81 +1,121 @@
 <div align="center">
-  
-  <!-- 3D Hero Banner -->
-  <img src="./assets/3d-hero.svg" alt="DenxVil - AI Engineer & Full Stack Developer" width="100%" />
-  
-  <!-- GitHub Pro Badge -->
-  <p>
-    <a href="https://github.com/DenxVil">
-      <img src="https://img.shields.io/badge/GitHub-PRO-6e5494?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Pro Badge" />
-    </a>
-  </p>
-  <p>
-    <a href="https://github.com/DenxVil">
-      <img src="./assets/pro-badge.svg" alt="GitHub Pro" height="35" />
-    </a>
-  </p>
-  
-  <!-- Profile Stats -->
-  [![Profile Views](https://komarev.com/ghpvc/?username=DenxVil&color=blueviolet&style=flat-square&label=Profile+Views)](https://github.com/DenxVil)
-  [![GitHub followers](https://img.shields.io/github/followers/DenxVil?label=Followers&style=flat-square&color=blue)](https://github.com/DenxVil)
-  [![GitHub stars](https://img.shields.io/github/stars/DenxVil?label=Stars&style=flat-square&color=yellow)](https://github.com/DenxVil)
-  
-  <!-- Call to Action Buttons -->
-  <p>
-    <a href="https://github.com/DenxVil?tab=followers">
-      <img src="https://img.shields.io/badge/Follow-DenxVil-00d9ff?style=for-the-badge&logo=github" alt="Follow on GitHub" />
-    </a>
-    <a href="https://t.me/xDenvil_bot">
-      <img src="https://img.shields.io/badge/Connect-Telegram-2CA5E0?style=for-the-badge&logo=telegram" alt="Connect on Telegram" />
-    </a>
-    <a href="mailto:NexusAisupport@gmail.com">
-      <img src="https://img.shields.io/badge/Hire_Me-Email-D14836?style=for-the-badge&logo=gmail" alt="Hire Me" />
-    </a>
-  </p>
-  
-  <!-- Typing Animation -->
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=00D9FF&center=true&vCenter=true&width=600&lines=AI+Engineer+%26+Full+Stack+Developer;Building+Intelligent+AI+Solutions;Creating+Amazing+User+Experiences;Open+Source+Contributor;Always+Learning+%26+Growing" alt="Typing Animation - AI Engineer & Full Stack Developer" />
-  
+
+<!-- 🎨 Layered 3D Hero Section -->
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/hero-depth-base.svg">
+  <img src="./assets/hero-depth-base.svg" alt="3D Hero Base Layer" width="100%" />
+</picture>
+
+<div style="position: relative; margin-top: -300px;">
+  <img src="./assets/hero-parallax-rings.svg" alt="Parallax Ring System" width="100%" style="opacity: 0.8;" />
 </div>
+
+<div style="position: relative; margin-top: -200px;">
+  <img src="./assets/hero-floating-cubes.svg" alt="Floating 3D Elements" width="100%" style="opacity: 0.9;" />
+</div>
+
+<br>
+
+<!-- 🌟 PROMINENT GITHUB PRO HIGHLIGHT -->
+<img src="./assets/pro-core-orbit.svg" alt="GitHub Pro Core Orbit" height="220" />
+
+<p>
+  <a href="https://github.com/DenxVil">
+    <img src="https://img.shields.io/badge/GitHub-PRO-6e5494?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Pro Badge" />
+  </a>
+  <a href="https://github.com/DenxVil">
+    <img src="./assets/pro-badge.svg" alt="GitHub Pro Enhanced" height="28" />
+  </a>
+</p>
+
+<!-- ✨ Title with Glow Effect -->
+<img src="./assets/title-glow.svg" alt="Title Glow" width="70%" />
+
+<h1>
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=32&duration=3000&pause=1000&color=00D9FF&center=true&vCenter=true&width=800&lines=DenxVil+%E2%9C%A8;AI+Engineer+%26+Full+Stack+Developer;Building+Intelligent+AI+Solutions;Creating+Ultra-Human+Experiences;Open+Source+Contributor;Always+Learning+%26+Innovating" alt="Typing Animation" />
+</h1>
+
+<!-- 📊 Profile Metrics -->
+<p>
+  <a href="https://github.com/DenxVil">
+    <img src="https://komarev.com/ghpvc/?username=DenxVil&color=blueviolet&style=for-the-badge&label=Profile+Views" alt="Profile Views" />
+  </a>
+  <a href="https://github.com/DenxVil?tab=followers">
+    <img src="https://img.shields.io/github/followers/DenxVil?label=Followers&style=for-the-badge&color=00d9ff&logo=github" alt="Followers" />
+  </a>
+  <a href="https://github.com/DenxVil?tab=repositories">
+    <img src="https://img.shields.io/github/stars/DenxVil?label=Total%20Stars&style=for-the-badge&color=yellow&logo=github" alt="Total Stars" />
+  </a>
+</p>
+
+<!-- 🎯 Quick CTAs -->
+<p>
+  <a href="https://github.com/DenxVil?tab=followers">
+    <img src="https://img.shields.io/badge/⭐_Follow-DenxVil-00d9ff?style=for-the-badge&logo=github&logoColor=white" alt="Follow" />
+  </a>
+  <a href="https://t.me/xDenvil_bot">
+    <img src="https://img.shields.io/badge/💬_Telegram-@xDenvil__bot-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram" />
+  </a>
+  <a href="mailto:NexusAisupport@gmail.com">
+    <img src="https://img.shields.io/badge/📧_Email-Hire_Me-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
+  </a>
+  <a href="https://denxvil.github.io">
+    <img src="https://img.shields.io/badge/🌐_Portfolio-Visit_Site-FF5722?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Portfolio" />
+  </a>
+</p>
+
+</div>
+
+<br>
 
 ---
 
-<div align="center">
-
-### ✨ Welcome to My  Profile ✨
-
-
-
-</div>
-
----
+<br>
 
 ## 👨‍💻 About Me
 
+<div align="center">
+  <img src="./assets/panel-depth.svg" alt="Panel Depth" width="90%" />
+</div>
+
 ```javascript
-const denvil = {
+const DenxVil = {
     name: "DenxVil",
     title: "AI Engineer & Full Stack Developer",
     location: "India 🇮🇳",
+    githubStatus: "PRO ✨",
     
     currentFocus: [
-        "Advanced AI Systems",
-        "Telegram Bot Development", 
-        "Multi-Modal AI Integration",
-        "Full Stack Web Applications"
+        "🧠 Advanced AI Systems & Multi-Modal Integration",
+        "🤖 Ultra-Human AI Assistant Development", 
+        "📱 Next-Gen Telegram Bot Platforms",
+        "🌐 Full Stack Web Applications with AI"
     ],
     
     passions: [
-        "Creating Ultra-Human AI Assistants",
-        "Building Scalable Applications",
-        "Open Source Contributions",
-        "Continuous Learning"
+        "Creating AI that understands humans deeply",
+        "Building scalable, intelligent applications",
+        "Contributing to open-source AI/ML projects",
+        "Continuous learning and innovation"
     ],
+    
+    techStack: {
+        languages: ["Python", "JavaScript", "TypeScript", "HTML5", "CSS3"],
+        aiFrameworks: ["OpenAI", "Google Gemini", "HuggingFace", "Perplexity"],
+        frontend: ["React", "Vite", "Tailwind CSS"],
+        backend: ["Node.js", "Express.js"],
+        databases: ["MongoDB"],
+        tools: ["Docker", "Git", "Azure", "Heroku"],
+        specialties: ["Telegram Bot APIs", "AI Integration", "RESTful APIs"]
+    },
     
     askMeAbout: [
         "AI/ML", "Python", "JavaScript", "TypeScript",
-        "React", "Node.js", "Telegram Bots", "MongoDB"
-    ]
+        "React", "Node.js", "Telegram Bots", "MongoDB",
+        "Multi-Modal AI", "Full Stack Development"
+    ],
+    
+    funFact: "Building AI that's more human than humans! ☕"
 };
 ```
 
@@ -83,42 +123,88 @@ const denvil = {
   
   ### 🎯 Currently Working On
   
-  🤖 **Advanced AI Systems** | 🌐 **Full Stack Applications** | 📱 **Telegram Bot Platforms**
+  <table>
+    <tr>
+      <td align="center">🧠<br><b>Advanced AI</b><br>Multi-modal systems</td>
+      <td align="center">🤖<br><b>Smart Bots</b><br>Ultra-human assistants</td>
+      <td align="center">🌐<br><b>Full Stack</b><br>Modern web apps</td>
+      <td align="center">📊<br><b>AI Integration</b><br>Seamless experiences</td>
+    </tr>
+  </table>
   
 </div>
 
 ---
 
-## 🛠️ Tech Stack & Skills
+<br>
+
+## 🛠️ Tech Stack - Skill Galaxy
 
 <div align="center">
 
-### Programming Languages
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+<img src="./assets/stack-orbit.svg" alt="Tech Stack Orbital System" width="500" />
 
-### Frameworks & Libraries
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
-![Express.js](https://img.shields.io/badge/Express.js-404D59?style=for-the-badge)
-![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+<br><br>
 
-### AI & Machine Learning
+### 💫 Core Technologies
+
+<table>
+<tr>
+<td align="center" width="20%">
+<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" /><br>
+<b>Python</b><br>
+<sub>Core Language</sub>
+</td>
+<td align="center" width="20%">
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" /><br>
+<b>JavaScript</b><br>
+<sub>Web Development</sub>
+</td>
+<td align="center" width="20%">
+<img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" /><br>
+<b>TypeScript</b><br>
+<sub>Type Safety</sub>
+</td>
+<td align="center" width="20%">
+<img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" /><br>
+<b>React</b><br>
+<sub>Frontend</sub>
+</td>
+<td align="center" width="20%">
+<img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js" /><br>
+<b>Node.js</b><br>
+<sub>Backend</sub>
+</td>
+</tr>
+</table>
+
+### 🤖 AI & Machine Learning
+
 ![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white)
 ![HuggingFace](https://img.shields.io/badge/🤗_Hugging_Face-FFD21E?style=for-the-badge)
 ![Google Gemini](https://img.shields.io/badge/Google_Gemini-4285F4?style=for-the-badge&logo=google&logoColor=white)
+![Perplexity](https://img.shields.io/badge/Perplexity-20B2AA?style=for-the-badge)
 
-### Databases & Cloud
+### 🎨 Frontend & Styling
+
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+
+### 🗄️ Backend & Databases
+
+![Express.js](https://img.shields.io/badge/Express.js-404D59?style=for-the-badge)
 ![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
+
+### ☁️ DevOps & Cloud
+
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 ![Azure](https://img.shields.io/badge/Microsoft_Azure-0089D0?style=for-the-badge&logo=microsoft-azure&logoColor=white)
 ![Heroku](https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white)
 
-### Tools & Platforms
+### 🛠️ Tools & Platforms
+
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 ![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)
 ![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)
@@ -128,9 +214,13 @@ const denvil = {
 
 ---
 
-## 🌟 Featured Projects
+<br>
+
+## 🌟 Featured Projects - Floating Panels
 
 <div align="center">
+
+<img src="./assets/panel-depth.svg" alt="Project Panel" width="80%" />
 
 ### 🤖 AI-Powered Applications
 
@@ -276,32 +366,61 @@ const denvil = {
 
 ---
 
+<br>
+
 ## 🎯 Current Focus & Goals
 
 <div align="center">
 
+<img src="./assets/focus-hex-grid.svg" alt="Focus Hexagonal Grid" width="600" />
+
+<br>
+
 ```mermaid
 graph LR
-    A[AI Research] --> B[Advanced Bots]
-    B --> C[Full Stack Apps]
-    C --> D[Open Source]
-    D --> E[Community Impact]
+    A[🧠 AI Research] --> B[🤖 Advanced Bots]
+    B --> C[🌐 Full Stack Apps]
+    C --> D[📦 Open Source]
+    D --> E[🌍 Community Impact]
+    E --> A
     
-    style A fill:#ff9999
-    style B fill:#66b3ff
-    style C fill:#99ff99
-    style D fill:#ffcc99
-    style E fill:#ff99cc
+    style A fill:#ff9999,stroke:#ff6666,stroke-width:3px
+    style B fill:#66b3ff,stroke:#3399ff,stroke-width:3px
+    style C fill:#99ff99,stroke:#66ff66,stroke-width:3px
+    style D fill:#ffcc99,stroke:#ff9966,stroke-width:3px
+    style E fill:#ff99cc,stroke:#ff66aa,stroke-width:3px
 ```
+
+<br>
+
+### 🎯 2024-2025 Goals & Roadmap
 
 </div>
 
-### 🎯 2024 Goals
-- 🤖 Launch next-generation AI assistant with multimodal capabilities
-- 🌐 Build comprehensive AI platform with web interface
-- 📚 Contribute to open-source AI/ML projects
-- 🚀 Scale existing projects to serve more users
-- 🎓 Master advanced machine learning techniques
+<table>
+<tr>
+<td width="50%" valign="top">
+
+#### 🚀 Development Goals
+- 🤖 Launch next-generation AI assistant with advanced multimodal capabilities
+- 🌐 Build comprehensive AI platform with modern web interface
+- 🔗 Integrate multiple AI providers with seamless fallback systems
+- ⚡ Optimize performance and scalability for thousands of users
+- 🎨 Create intuitive UIs for complex AI interactions
+
+</td>
+<td width="50%" valign="top">
+
+#### 🌟 Community & Growth
+- 📚 Contribute actively to open-source AI/ML projects
+- 🎓 Master advanced machine learning and deep learning techniques
+- 👥 Build collaborative developer community
+- 📝 Share knowledge through documentation and tutorials
+- 🌍 Scale projects to serve global user base
+
+</td>
+</tr>
+</table>
 
 ---
 
