@@ -84,21 +84,25 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
-      # 6️⃣ Fallback: Run Python update script directly
-      - name: 🔄 Update dynamic content (Python script)
+      # 6️⃣ Fallback: Run Python update script directly (if shell script is missing)
+      # Note: This is a fallback only. The shell script (generate_readme_assets.sh)
+      # is the preferred entry point as it handles multiple scenarios.
+      - name: 🔄 Update dynamic content (Direct Python fallback)
         if: steps.check_script.outputs.script_exists == 'false'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           if [ -f "scripts/update_readme.py" ]; then
+            echo "ℹ️  Shell script not found, calling Python script directly..."
             if [ "${{ github.event.inputs.dry_run }}" == "true" ]; then
               python scripts/update_readme.py --dry-run
             else
               python scripts/update_readme.py
             fi
           else
-            echo "⚠️  No update script found. Skipping update."
-            echo "💡 To enable automated updates, add scripts/update_readme.py or scripts/generate_readme_assets.sh"
+            echo "⚠️  No update scripts found. Skipping update."
+            echo "💡 To enable automated updates, add scripts/generate_readme_assets.sh (preferred)"
+            echo "   or scripts/update_readme.py (direct Python approach)"
           fi
       
       # 7️⃣ Check for changes
@@ -120,7 +124,8 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add README.md assets/*.svg
+          # Only commit expected generated files (README.md and SVG assets)
+          git add README.md assets/stats.svg assets/top-langs.svg
           git commit -m "🤖 Auto-update 3D Profile README with latest GitHub stats [skip ci]"
           git push
       

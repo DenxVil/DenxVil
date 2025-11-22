@@ -69,7 +69,8 @@ fi
 echo ""
 echo -e "${YELLOW}🔍 Checking for update scripts...${NC}"
 
-# Option 1: Python script (preferred)
+# Priority 1: Python script (preferred - currently exists)
+# This is checked first because the repository already has a Python implementation
 if [ -f "scripts/update_readme.py" ]; then
     echo -e "${GREEN}✅ Found Python update script${NC}"
     echo -e "${BLUE}📊 Running Python update script...${NC}"
@@ -92,7 +93,8 @@ if [ -f "scripts/update_readme.py" ]; then
     fi
 fi
 
-# Option 2: Node.js script (alternative)
+# Priority 2: Node.js script (alternative if Python not available)
+# Note: If both Python and Node.js scripts exist, Python takes precedence
 if [ -f "scripts/update_readme.js" ]; then
     echo -e "${GREEN}✅ Found Node.js update script${NC}"
     echo -e "${BLUE}📊 Running Node.js update script...${NC}"
