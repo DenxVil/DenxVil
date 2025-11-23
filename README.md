@@ -337,19 +337,19 @@ Depth-based interactive menu systems with spatial awareness
 ### 🌐 Personal & Portfolio
 
 #### 💼 [DenxVil.github.io](https://github.com/DenxVil/DenxVil.github.io)
-**Personal Portfolio Website - 3D Interactive Experience**
+**Personal Portfolio Website - Featuring 3D Interactive Capabilities**
 
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
 ![Three.js](https://img.shields.io/badge/Three.js-000000?style=flat-square&logo=three.js&logoColor=white)
 ![React Three Fiber](https://img.shields.io/badge/R3F-000000?style=flat-square)
 ![Web](https://img.shields.io/badge/Portfolio-Live-success?style=flat-square)
 
-🌟 **Modern 3D web design** showcasing:
-- **Three.js & React Three Fiber** for immersive 3D environments
+🌟 **Modern web design** featuring 3D capabilities including:
+- **Three.js & React Three Fiber** integration for immersive 3D environments
 - **Interactive 3D UI components** with physics-based animations
 - **Real-time graphics rendering** with custom GLSL shader effects
 - **Physics-based interactions** and GPU-optimized particle systems
-- **Responsive 3D layouts** that adapt across all devices
+- **Responsive 3D layouts** that scale across all devices
 
 <!-- [3D Portfolio Preview - GIF/Video] -->
 
@@ -461,7 +461,7 @@ Interactive 3D graph of AI provider chains
 
 #### 📦 **Asset Loading Strategies**
 - **glTF/GLB Format**: Industry-standard 3D model format
-- **Texture Compression**: DXT/ETC/ASTC for reduced memory
+- **Texture Compression**: Platform-optimized formats (DXT, ETC, ASTC, PVRTC)
 - **Progressive Loading**: Load low-res first, high-res later
 - **Asset Preloading**: Smart cache management
 - **Lazy Loading**: Load 3D assets on demand
