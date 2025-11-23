@@ -1,0 +1,69 @@
+name: Markdown Lint
+
+on:
+  push:
+    branches:
+      - main
+      - 'copilot/**'
+    paths:
+      - '**.md'
+      - '.github/workflows/markdown-lint.yml'
+  pull_request:
+    paths:
+      - '**.md'
+      - '.github/workflows/markdown-lint.yml'
+
+jobs:
+  lint:
+    name: Lint Markdown Files
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          
+      - name: Install markdownlint-cli
+        run: npm install -g markdownlint-cli
+        
+      - name: Create markdownlint config
+        run: |
+          cat > .markdownlint.json << 'EOF'
+          {
+            "default": true,
+            "MD001": true,
+            "MD003": { "style": "atx" },
+            "MD004": { "style": "dash" },
+            "MD007": { "indent": 2 },
+            "MD013": false,
+            "MD024": { "siblings_only": true },
+            "MD025": true,
+            "MD026": { "punctuation": ".,;:!" },
+            "MD033": false,
+            "MD034": false,
+            "MD036": false,
+            "MD040": false,
+            "MD041": false,
+            "MD046": { "style": "fenced" },
+            "MD049": { "style": "underscore" },
+            "MD050": { "style": "asterisk" }
+          }
+          EOF
+          
+      - name: Lint README.md
+        run: markdownlint README.md --config .markdownlint.json || true
+        continue-on-error: true
+        
+      - name: Lint test markdown files
+        run: markdownlint tests/**/*.md --config .markdownlint.json || true
+        continue-on-error: true
+        
+      - name: Summary
+        run: |
+          echo "✅ Markdown linting completed"
+          echo "📝 Checked files: README.md and tests/*.md"
+          echo "⚠️  Note: Linting runs with continue-on-error for information purposes"
