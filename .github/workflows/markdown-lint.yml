@@ -29,37 +29,13 @@ jobs:
           
       - name: Install markdownlint-cli
         run: npm install -g markdownlint-cli
-        
-      - name: Create markdownlint config
-        run: |
-          cat > .markdownlint.json << 'EOF'
-          {
-            "default": true,
-            "MD001": true,
-            "MD003": { "style": "atx" },
-            "MD004": { "style": "dash" },
-            "MD007": { "indent": 2 },
-            "MD013": false,
-            "MD024": { "siblings_only": true },
-            "MD025": true,
-            "MD026": { "punctuation": ".,;:!" },
-            "MD033": false,
-            "MD034": false,
-            "MD036": false,
-            "MD040": false,
-            "MD041": false,
-            "MD046": { "style": "fenced" },
-            "MD049": { "style": "underscore" },
-            "MD050": { "style": "asterisk" }
-          }
-          EOF
           
       - name: Lint README.md
-        run: markdownlint README.md --config .markdownlint.json || true
+        run: markdownlint README.md --config .markdownlint.json
         continue-on-error: true
         
       - name: Lint test markdown files
-        run: markdownlint tests/**/*.md --config .markdownlint.json || true
+        run: markdownlint tests/**/*.md --config .markdownlint.json
         continue-on-error: true
         
       - name: Summary
