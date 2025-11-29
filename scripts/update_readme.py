@@ -3,14 +3,18 @@
 GitHub Profile README Updater
 Fetches dynamic GitHub data and updates the README.md file between markers.
 Uses GitHub REST API with GITHUB_TOKEN for authentication.
+Enhanced with retry logic, caching, and improved SVG generation.
 """
 
 import os
 import sys
 import json
 import requests
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
 from datetime import datetime, timedelta
 from collections import defaultdict
+from functools import lru_cache
 import re
 
 # Configuration
@@ -20,6 +24,43 @@ REPO_NAME = 'DenxVil'
 README_PATH = 'README.md'
 ASSETS_DIR = 'assets'
 
+# Theme configuration
+THEME = {
+    'primary': '#00d9ff',
+    'secondary': '#5b86e5',
+    'accent': '#ff6b6b',
+    'success': '#4ecdc4',
+    'bg_dark': '#0d1117',
+    'bg_light': '#161b22',
+    'bg_lighter': '#21262d',
+    'text': '#c9d1d9',
+    'text_muted': '#8b949e'
+}
+
+# Language colors - extended list
+LANGUAGE_COLORS = {
+    'Python': '#3776AB',
+    'JavaScript': '#F7DF1E',
+    'TypeScript': '#007ACC',
+    'HTML': '#E34F26',
+    'CSS': '#1572B6',
+    'Java': '#007396',
+    'C++': '#00599C',
+    'C': '#A8B9CC',
+    'Go': '#00ADD8',
+    'Rust': '#DEA584',
+    'Ruby': '#CC342D',
+    'PHP': '#777BB4',
+    'Swift': '#FA7343',
+    'Kotlin': '#A97BFF',
+    'Dart': '#0175C2',
+    'Shell': '#89e051',
+    'Dockerfile': '#384d54',
+    'Vue': '#4FC08D',
+    'SCSS': '#c6538c',
+    'Jupyter Notebook': '#DA5B0B'
+}
+
 # API endpoints
 GITHUB_API_BASE = 'https://api.github.com'
 HEADERS = {
@@ -28,18 +69,38 @@ HEADERS = {
 }
 
 
+def create_session_with_retry():
+    """Create a requests session with retry logic."""
+    session = requests.Session()
+    retry_strategy = Retry(
+        total=3,
+        backoff_factor=1,
+        status_forcelist=[429, 500, 502, 503, 504],
+        allowed_methods=["HEAD", "GET", "OPTIONS"]
+    )
+    adapter = HTTPAdapter(max_retries=retry_strategy)
+    session.mount("https://", adapter)
+    session.mount("http://", adapter)
+    return session
+
+
+# Create session with retry logic
+session = create_session_with_retry()
+
+
+@lru_cache(maxsize=1)
 def fetch_user_info():
-    """Fetch basic user profile information."""
+    """Fetch basic user profile information with caching."""
     url = f'{GITHUB_API_BASE}/users/{REPO_OWNER}'
     # Use headers only if token is available
     headers = HEADERS if GITHUB_TOKEN else {'Accept': 'application/vnd.github.v3+json'}
-    response = requests.get(url, headers=headers)
+    response = session.get(url, headers=headers, timeout=30)
     response.raise_for_status()
     return response.json()
 
 
 def fetch_user_repos():
-    """Fetch all user repositories."""
+    """Fetch all user repositories with retry logic."""
     repos = []
     page = 1
     per_page = 100
@@ -49,7 +110,7 @@ def fetch_user_repos():
     while True:
         url = f'{GITHUB_API_BASE}/users/{REPO_OWNER}/repos'
         params = {'per_page': per_page, 'page': page, 'sort': 'updated'}
-        response = requests.get(url, headers=headers, params=params)
+        response = session.get(url, headers=headers, params=params, timeout=30)
         response.raise_for_status()
         
         data = response.json()
@@ -67,7 +128,7 @@ def fetch_user_repos():
 
 
 def calculate_language_stats(repos):
-    """Calculate language statistics from repositories."""
+    """Calculate language statistics from repositories with caching."""
     language_bytes = defaultdict(int)
     # Use headers only if token is available
     headers = HEADERS if GITHUB_TOKEN else {'Accept': 'application/vnd.github.v3+json'}
@@ -78,12 +139,15 @@ def calculate_language_stats(repos):
             
         # Fetch language stats for each repo
         lang_url = repo['languages_url']
-        response = requests.get(lang_url, headers=headers)
-        
-        if response.status_code == 200:
-            languages = response.json()
-            for lang, bytes_count in languages.items():
-                language_bytes[lang] += bytes_count
+        try:
+            response = session.get(lang_url, headers=headers, timeout=30)
+            
+            if response.status_code == 200:
+                languages = response.json()
+                for lang, bytes_count in languages.items():
+                    language_bytes[lang] += bytes_count
+        except requests.exceptions.RequestException:
+            continue
     
     # Calculate percentages
     total_bytes = sum(language_bytes.values())
@@ -96,7 +160,8 @@ def calculate_language_stats(repos):
         language_stats.append({
             'name': lang,
             'percentage': percentage,
-            'bytes': bytes_count
+            'bytes': bytes_count,
+            'color': LANGUAGE_COLORS.get(lang, '#808080')
         })
     
     # Sort by percentage
@@ -105,7 +170,7 @@ def calculate_language_stats(repos):
 
 
 def fetch_commit_activity():
-    """Fetch commit activity for the last year."""
+    """Fetch commit activity for the last year with retry logic."""
     # This endpoint requires authentication and repo access
     # We'll estimate from recent commits across all repos
     total_commits = 0
@@ -119,7 +184,7 @@ def fetch_commit_activity():
         try:
             url = f"{GITHUB_API_BASE}/repos/{REPO_OWNER}/{repo['name']}/commits"
             params = {'since': one_year_ago, 'per_page': 100, 'author': REPO_OWNER}
-            response = requests.get(url, headers=headers, params=params)
+            response = session.get(url, headers=headers, params=params, timeout=30)
             
             if response.status_code == 200:
                 commits = response.json()
@@ -135,7 +200,7 @@ def fetch_commit_activity():
                             last_page = int(match.group(1))
                             # Estimate total commits
                             total_commits += (last_page - 1) * 100
-        except Exception as e:
+        except requests.exceptions.RequestException as e:
             print(f"Error fetching commits for {repo['name']}: {e}")
             continue
     
@@ -158,52 +223,85 @@ def get_top_repos(repos, limit=6):
 
 
 def generate_stats_svg(user_info, total_commits, repos):
-    """Generate stats SVG."""
+    """Generate enhanced stats SVG with animations."""
     public_repos = user_info.get('public_repos', 0)
     followers = user_info.get('followers', 0)
     following = user_info.get('following', 0)
     
+    # Calculate total stars
+    total_stars = sum(repo.get('stargazers_count', 0) for repo in repos if not repo.get('fork', False))
+    
     svg_content = f'''<svg width="495" height="195" viewBox="0 0 495 195" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="stats-bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#16213e;stop-opacity:1" />
+      <stop offset="0%" style="stop-color:{THEME['bg_dark']};stop-opacity:1" />
+      <stop offset="50%" style="stop-color:{THEME['bg_light']};stop-opacity:1" />
+      <stop offset="100%" style="stop-color:{THEME['bg_lighter']};stop-opacity:1" />
     </linearGradient>
+    
+    <linearGradient id="stat-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:{THEME['primary']}"/>
+      <stop offset="100%" style="stop-color:{THEME['secondary']}"/>
+    </linearGradient>
+    
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
     <style>
-      .stat-title {{ font-family: 'Segoe UI', Arial, sans-serif; font-size: 14px; fill: #a0a0a0; }}
-      .stat-value {{ font-family: 'Segoe UI', Arial, sans-serif; font-size: 28px; font-weight: bold; fill: #00d9ff; }}
-      .stat-label {{ font-family: 'Segoe UI', Arial, sans-serif; font-size: 12px; fill: #808080; }}
+      @keyframes countUp {{ 0% {{ opacity: 0; transform: translateY(10px); }} 100% {{ opacity: 1; transform: translateY(0); }} }}
+      @keyframes pulse {{ 0%, 100% {{ opacity: 0.6; }} 50% {{ opacity: 1; }} }}
+      .count-up {{ animation: countUp 1s ease-out forwards; }}
+      .stat-title {{ font-family: 'Segoe UI', Arial, sans-serif; font-size: 14px; fill: {THEME['text']}; font-weight: 600; }}
+      .stat-value {{ font-family: 'Segoe UI', Arial, sans-serif; font-size: 28px; font-weight: bold; fill: url(#stat-gradient); }}
+      .stat-label {{ font-family: 'Segoe UI', Arial, sans-serif; font-size: 11px; fill: {THEME['text_muted']}; }}
+      .pulse {{ animation: pulse 3s ease-in-out infinite; }}
     </style>
   </defs>
   
   <rect width="495" height="195" rx="10" fill="url(#stats-bg)"/>
-  <rect x="2" y="2" width="491" height="191" rx="8" fill="none" stroke="#00d9ff" stroke-width="2" opacity="0.3"/>
+  <rect x="2" y="2" width="491" height="191" rx="8" fill="none" stroke="{THEME['primary']}" stroke-width="1.5" opacity="0.4"/>
   
-  <text x="20" y="30" class="stat-title">GitHub Statistics</text>
+  <!-- Header -->
+  <text x="20" y="30" class="stat-title">📊 GitHub Statistics</text>
+  <line x1="20" y1="45" x2="475" y2="45" stroke="{THEME['primary']}" stroke-width="0.5" opacity="0.3"/>
   
-  <!-- Total Commits (Last Year) -->
-  <text x="30" y="80" class="stat-value">{total_commits:,}</text>
-  <text x="30" y="95" class="stat-label">Total Commits</text>
-  <text x="30" y="107" class="stat-label">(Last Year)</text>
+  <!-- Stats Grid -->
+  <g class="count-up" style="animation-delay: 0.2s">
+    <text x="60" y="85" class="stat-value" text-anchor="middle" filter="url(#glow)">{total_commits:,}</text>
+    <text x="60" y="105" class="stat-label" text-anchor="middle">Commits</text>
+    <text x="60" y="118" class="stat-label" text-anchor="middle">(Last Year)</text>
+  </g>
   
-  <!-- Public Repos -->
-  <text x="190" y="80" class="stat-value">{public_repos}</text>
-  <text x="190" y="95" class="stat-label">Public Repos</text>
+  <g class="count-up" style="animation-delay: 0.4s">
+    <text x="170" y="85" class="stat-value" text-anchor="middle" filter="url(#glow)">{public_repos}</text>
+    <text x="170" y="105" class="stat-label" text-anchor="middle">Public Repos</text>
+  </g>
   
-  <!-- Followers -->
-  <text x="320" y="80" class="stat-value">{followers}</text>
-  <text x="320" y="95" class="stat-label">Followers</text>
+  <g class="count-up" style="animation-delay: 0.6s">
+    <text x="280" y="85" class="stat-value" text-anchor="middle" filter="url(#glow)">{followers}</text>
+    <text x="280" y="105" class="stat-label" text-anchor="middle">Followers</text>
+  </g>
   
-  <!-- Following -->
-  <text x="420" y="80" class="stat-value">{following}</text>
-  <text x="420" y="95" class="stat-label">Following</text>
+  <g class="count-up" style="animation-delay: 0.8s">
+    <text x="390" y="85" class="stat-value" text-anchor="middle" filter="url(#glow)">{total_stars}</text>
+    <text x="390" y="105" class="stat-label" text-anchor="middle">Total Stars</text>
+  </g>
   
-  <!-- Decorative line -->
-  <line x1="20" y1="130" x2="475" y2="130" stroke="#00d9ff" stroke-width="1" opacity="0.2"/>
+  <!-- Progress Bar -->
+  <rect x="20" y="140" width="455" height="6" rx="3" fill="{THEME['bg_lighter']}"/>
+  <rect x="20" y="140" width="0" height="6" rx="3" fill="url(#stat-gradient)" class="pulse">
+    <animate attributeName="width" from="0" to="350" dur="2s" fill="freeze"/>
+  </rect>
   
-  <!-- Last updated -->
-  <text x="247.5" y="165" class="stat-label" text-anchor="middle">
-    Last updated: {datetime.now().strftime('%Y-%m-%d %H:%M UTC')}
+  <!-- Footer -->
+  <line x1="20" y1="160" x2="475" y2="160" stroke="{THEME['primary']}" stroke-width="0.5" opacity="0.2"/>
+  <text x="247.5" y="180" class="stat-label" text-anchor="middle">
+    ✨ Last updated: {datetime.now().strftime('%Y-%m-%d %H:%M UTC')}
   </text>
 </svg>'''
     
@@ -211,58 +309,109 @@ def generate_stats_svg(user_info, total_commits, repos):
 
 
 def generate_languages_svg(language_stats):
-    """Generate top languages SVG."""
-    colors = {
-        'Python': '#3776AB',
-        'JavaScript': '#F7DF1E',
-        'TypeScript': '#007ACC',
-        'HTML': '#E34F26',
-        'CSS': '#1572B6',
-        'Java': '#007396',
-        'C++': '#00599C',
-        'C': '#A8B9CC',
-        'Go': '#00ADD8',
-        'Rust': '#000000',
-    }
+    """Generate enhanced top languages SVG with donut chart and animations."""
     
-    svg_content = '''<svg width="495" height="195" viewBox="0 0 495 195" xmlns="http://www.w3.org/2000/svg">
+    # Calculate donut chart segments
+    total_circumference = 251.2  # 2 * pi * 40
+    segments = []
+    offset = 0
+    
+    for lang in language_stats[:5]:
+        segment_length = (lang['percentage'] / 100) * total_circumference
+        color = lang.get('color', LANGUAGE_COLORS.get(lang['name'], '#808080'))
+        segments.append({
+            'name': lang['name'],
+            'percentage': lang['percentage'],
+            'color': color,
+            'length': segment_length,
+            'offset': offset
+        })
+        offset += segment_length
+    
+    svg_content = f'''<svg width="495" height="195" viewBox="0 0 495 195" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="langs-bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#16213e;stop-opacity:1" />
+      <stop offset="0%" style="stop-color:{THEME['bg_dark']};stop-opacity:1" />
+      <stop offset="50%" style="stop-color:{THEME['bg_light']};stop-opacity:1" />
+      <stop offset="100%" style="stop-color:{THEME['bg_lighter']};stop-opacity:1" />
     </linearGradient>
+    
     <style>
-      .lang-title { font-family: 'Segoe UI', Arial, sans-serif; font-size: 14px; fill: #a0a0a0; }
-      .lang-name { font-family: 'Segoe UI', Arial, sans-serif; font-size: 12px; fill: #ffffff; }
-      .lang-percent { font-family: 'Segoe UI', Arial, sans-serif; font-size: 12px; fill: #a0a0a0; }
+      @keyframes rotate {{ from {{ transform: rotate(0deg); }} to {{ transform: rotate(360deg); }} }}
+      @keyframes fadeIn {{ 0% {{ opacity: 0; }} 100% {{ opacity: 1; }} }}
+      @keyframes drawSegment {{ 0% {{ stroke-dashoffset: 251.2; }} 100% {{ stroke-dashoffset: 0; }} }}
+      .lang-title {{ font-family: 'Segoe UI', Arial, sans-serif; font-size: 14px; fill: {THEME['text']}; font-weight: 600; }}
+      .lang-name {{ font-family: 'Segoe UI', Arial, sans-serif; font-size: 12px; fill: {THEME['text']}; }}
+      .lang-percent {{ font-family: 'Segoe UI', Arial, sans-serif; font-size: 11px; fill: {THEME['text_muted']}; }}
+      .donut-segment {{ animation: drawSegment 1.5s ease-out forwards; }}
+      .fade-in {{ animation: fadeIn 0.5s ease-out forwards; }}
     </style>
   </defs>
   
   <rect width="495" height="195" rx="10" fill="url(#langs-bg)"/>
-  <rect x="2" y="2" width="491" height="191" rx="8" fill="none" stroke="#36d1dc" stroke-width="2" opacity="0.3"/>
+  <rect x="2" y="2" width="491" height="191" rx="8" fill="none" stroke="{THEME['primary']}" stroke-width="1.5" opacity="0.4"/>
   
-  <text x="20" y="30" class="lang-title">Top Languages</text>
+  <!-- Header -->
+  <text x="20" y="30" class="lang-title">💻 Top Languages</text>
+  <line x1="20" y1="45" x2="475" y2="45" stroke="{THEME['primary']}" stroke-width="0.5" opacity="0.3"/>
+  
+  <!-- Donut Chart -->
+  <g transform="translate(100, 115)">
+    <!-- Background circle -->
+    <circle cx="0" cy="0" r="40" fill="none" stroke="{THEME['bg_lighter']}" stroke-width="12"/>
 '''
     
-    y_offset = 55
-    for i, lang in enumerate(language_stats[:5]):
-        lang_name = lang['name']
-        percentage = lang['percentage']
-        color = colors.get(lang_name, '#808080')
-        
-        bar_width = (percentage / 100) * 420
-        
+    # Add donut segments
+    for i, seg in enumerate(segments):
+        delay = i * 0.3
         svg_content += f'''
-  <!-- {lang_name} -->
-  <circle cx="30" cy="{y_offset}" r="5" fill="{color}"/>
-  <text x="45" y="{y_offset + 4}" class="lang-name">{lang_name}</text>
-  <text x="460" y="{y_offset + 4}" class="lang-percent" text-anchor="end">{percentage:.1f}%</text>
-  <rect x="45" y="{y_offset + 8}" width="410" height="4" rx="2" fill="#2d2d2d"/>
-  <rect x="45" y="{y_offset + 8}" width="{bar_width}" height="4" rx="2" fill="{color}"/>
+    <!-- {seg['name']} segment -->
+    <circle cx="0" cy="0" r="40" fill="none" stroke="{seg['color']}" stroke-width="12"
+            stroke-dasharray="{seg['length']} {total_circumference}" stroke-dashoffset="-{seg['offset']}" 
+            class="donut-segment" transform="rotate(-90)" style="animation-delay: {delay}s"/>
 '''
-        y_offset += 25
     
-    svg_content += '''
+    # Center text
+    num_languages = len(language_stats)
+    svg_content += f'''
+    <!-- Center text -->
+    <text x="0" y="5" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" 
+          font-size="14" fill="{THEME['text']}" font-weight="600">{num_languages}+</text>
+    <text x="0" y="18" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" 
+          font-size="8" fill="{THEME['text_muted']}">Languages</text>
+  </g>
+  
+  <!-- Legend -->
+  <g transform="translate(200, 60)" class="fade-in">
+'''
+    
+    # Add legend items
+    for i, seg in enumerate(segments):
+        y_pos = i * 25 + 8
+        bar_width = (seg['percentage'] / 100) * 100
+        svg_content += f'''
+    <!-- {seg['name']} -->
+    <circle cx="0" cy="{y_pos}" r="5" fill="{seg['color']}"/>
+    <text x="15" y="{y_pos + 4}" class="lang-name">{seg['name']}</text>
+    <text x="140" y="{y_pos + 4}" class="lang-percent">{seg['percentage']:.1f}%</text>
+'''
+    
+    svg_content += '''  </g>
+  
+  <!-- Progress bars -->
+  <g transform="translate(365, 60)" class="fade-in" style="animation-delay: 0.5s">
+'''
+    
+    # Add progress bars
+    for i, seg in enumerate(segments):
+        y_pos = i * 25 + 3
+        bar_width = (seg['percentage'] / 100) * 100
+        svg_content += f'''
+    <rect x="0" y="{y_pos}" width="100" height="6" rx="3" fill="{THEME['bg_lighter']}"/>
+    <rect x="0" y="{y_pos}" width="{bar_width}" height="6" rx="3" fill="{seg['color']}"/>
+'''
+    
+    svg_content += '''  </g>
 </svg>'''
     
     return svg_content
