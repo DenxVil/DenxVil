@@ -88,9 +88,13 @@ def create_session_with_retry():
 session = create_session_with_retry()
 
 
-@lru_cache(maxsize=1)
+@lru_cache()
 def fetch_user_info():
-    """Fetch basic user profile information with caching."""
+    """Fetch basic user profile information with caching.
+    
+    Note: lru_cache is used here to cache the result for the duration of
+    the script execution, preventing redundant API calls.
+    """
     url = f'{GITHUB_API_BASE}/users/{REPO_OWNER}'
     # Use headers only if token is available
     headers = HEADERS if GITHUB_TOKEN else {'Accept': 'application/vnd.github.v3+json'}

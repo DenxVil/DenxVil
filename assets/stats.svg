@@ -40,26 +40,26 @@
   <!-- Stats Grid -->
   <g class="count-up" style="animation-delay: 0.2s">
     <!-- Commits -->
-    <text x="60" y="85" class="stat-value" text-anchor="middle" filter="url(#glow)">--</text>
+    <text x="60" y="85" class="stat-value" text-anchor="middle" filter="url(#glow)">150</text>
     <text x="60" y="105" class="stat-label" text-anchor="middle">Commits</text>
     <text x="60" y="118" class="stat-label" text-anchor="middle">(Last Year)</text>
   </g>
   
   <g class="count-up" style="animation-delay: 0.4s">
     <!-- Repos -->
-    <text x="170" y="85" class="stat-value" text-anchor="middle" filter="url(#glow)">--</text>
+    <text x="170" y="85" class="stat-value" text-anchor="middle" filter="url(#glow)">10</text>
     <text x="170" y="105" class="stat-label" text-anchor="middle">Public Repos</text>
   </g>
   
   <g class="count-up" style="animation-delay: 0.6s">
     <!-- Followers -->
-    <text x="280" y="85" class="stat-value" text-anchor="middle" filter="url(#glow)">--</text>
+    <text x="280" y="85" class="stat-value" text-anchor="middle" filter="url(#glow)">5</text>
     <text x="280" y="105" class="stat-label" text-anchor="middle">Followers</text>
   </g>
   
   <g class="count-up" style="animation-delay: 0.8s">
     <!-- Stars -->
-    <text x="390" y="85" class="stat-value" text-anchor="middle" filter="url(#glow)">--</text>
+    <text x="390" y="85" class="stat-value" text-anchor="middle" filter="url(#glow)">3</text>
     <text x="390" y="105" class="stat-label" text-anchor="middle">Total Stars</text>
   </g>
   
