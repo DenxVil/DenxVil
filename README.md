@@ -1,4 +1,3 @@
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:1a1a2e,50:0f3460,100:00d9ff&height=200&section=header&text=DenxVil&fontSize=80&fontColor=ffffff&animation=fadeIn&fontAlignY=35&desc=AI%20Engineer%20%26%20Full%20Stack%20Developer&descAlignY=55&descSize=20"/>
 
 <div align="center">
   
