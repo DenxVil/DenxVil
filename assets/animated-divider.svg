@@ -1,0 +1,60 @@
+<svg width="800" height="40" viewBox="0 0 800 40" xmlns="http://www.w3.org/2000/svg">
+  <title>Animated Section Divider</title>
+  <defs>
+    <linearGradient id="divider-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#0d1117;stop-opacity:0"/>
+      <stop offset="20%" style="stop-color:#00d9ff">
+        <animate attributeName="stop-color" values="#00d9ff;#5b86e5;#4ecdc4;#00d9ff" dur="4s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="50%" style="stop-color:#5b86e5">
+        <animate attributeName="stop-color" values="#5b86e5;#4ecdc4;#00d9ff;#5b86e5" dur="4s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="80%" style="stop-color:#4ecdc4">
+        <animate attributeName="stop-color" values="#4ecdc4;#00d9ff;#5b86e5;#4ecdc4" dur="4s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" style="stop-color:#0d1117;stop-opacity:0"/>
+    </linearGradient>
+    <linearGradient id="divider-gradient-static" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#0d1117;stop-opacity:0"/>
+      <stop offset="20%" style="stop-color:#00d9ff"/>
+      <stop offset="50%" style="stop-color:#5b86e5"/>
+      <stop offset="80%" style="stop-color:#4ecdc4"/>
+      <stop offset="100%" style="stop-color:#0d1117;stop-opacity:0"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <style>
+      @media (prefers-reduced-motion: reduce) {
+        * { animation: none !important; }
+        .main-line { stroke: url(#divider-gradient-static); }
+      }
+      @keyframes dash { to { stroke-dashoffset: -40; } }
+      .animated-line { animation: dash 1s linear infinite; }
+    </style>
+  </defs>
+  
+  <!-- Main line -->
+  <line class="main-line" x1="50" y1="20" x2="750" y2="20" stroke="url(#divider-gradient)" stroke-width="2" stroke-linecap="round" filter="url(#glow)"/>
+  
+  <!-- Decorative dots -->
+  <circle cx="400" cy="20" r="4" fill="#00d9ff">
+    <animate attributeName="r" values="4;6;4" dur="1.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="1;0.6;1" dur="1.5s" repeatCount="indefinite"/>
+  </circle>
+  
+  <circle cx="380" cy="20" r="2" fill="#5b86e5">
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="420" cy="20" r="2" fill="#5b86e5">
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Outer decorative elements -->
+  <circle cx="350" cy="20" r="1.5" fill="#4ecdc4" opacity="0.5"/>
+  <circle cx="450" cy="20" r="1.5" fill="#4ecdc4" opacity="0.5"/>
+</svg>

@@ -1,0 +1,62 @@
+<svg width="400" height="180" viewBox="0 0 400 180" xmlns="http://www.w3.org/2000/svg">
+  <title>Shan-D Superadvanced AI - Ultra-Human AI Assistant</title>
+  <defs>
+    <linearGradient id="sd-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117"/>
+      <stop offset="100%" style="stop-color:#161b22"/>
+    </linearGradient>
+    <linearGradient id="sd-glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00d9ff">
+        <animate attributeName="stop-color" values="#00d9ff;#5b86e5;#00d9ff" dur="3s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" style="stop-color:#5b86e5">
+        <animate attributeName="stop-color" values="#5b86e5;#00d9ff;#5b86e5" dur="3s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+    <filter id="sd-shadow">
+      <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#00d9ff" flood-opacity="0.4">
+        <animate attributeName="stdDeviation" values="6;10;6" dur="3s" repeatCount="indefinite"/>
+      </feDropShadow>
+    </filter>
+    <style>
+      @media (prefers-reduced-motion: reduce) {
+        * { animation: none !important; }
+      }
+      @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
+      .float { animation: float 2s ease-in-out infinite; }
+    </style>
+  </defs>
+  
+  <!-- Card Background -->
+  <rect x="2" y="2" width="396" height="176" rx="12" fill="url(#sd-bg)" stroke="url(#sd-glow)" stroke-width="2" filter="url(#sd-shadow)"/>
+  
+  <!-- AI Brain Icon -->
+  <g transform="translate(25, 20)" class="float">
+    <circle cx="20" cy="20" r="18" fill="none" stroke="#00d9ff" stroke-width="2" opacity="0.5"/>
+    <text x="20" y="28" font-size="24" text-anchor="middle">🧠</text>
+  </g>
+  
+  <!-- Title -->
+  <text x="75" y="40" font-family="'Segoe UI', Arial" font-size="20" font-weight="bold" fill="#ffffff">Shan-D Superadvanced AI</text>
+  
+  <!-- Subtitle -->
+  <text x="75" y="60" font-family="'Segoe UI', Arial" font-size="13" fill="#00d9ff" aria-label="Ultra-Human AI Assistant Shan-D">Ultra-Human AI Assistant ⵢɧαɳ-Đ</text>
+  
+  <!-- Description -->
+  <text x="25" y="90" font-family="'Segoe UI', Arial" font-size="11" fill="#8b949e">🎭 Ultra-human conversations • 🧠 Emotional intelligence</text>
+  <text x="25" y="108" font-family="'Segoe UI', Arial" font-size="11" fill="#8b949e">🌍 Cultural awareness • 🗣️ Multilingual (EN, Hindi+)</text>
+  <text x="25" y="126" font-family="'Segoe UI', Arial" font-size="11" fill="#8b949e">🔄 Multi-model AI (GPT-4, Claude, Gemini)</text>
+  
+  <!-- Tech badges -->
+  <rect x="25" y="145" width="60" height="20" rx="4" fill="#3776AB20" stroke="#3776AB" stroke-width="1"/>
+  <text x="55" y="159" font-family="Arial" font-size="10" fill="#3776AB" text-anchor="middle">Python</text>
+  
+  <rect x="95" y="145" width="65" height="20" rx="4" fill="#2CA5E020" stroke="#2CA5E0" stroke-width="1"/>
+  <text x="127" y="159" font-family="Arial" font-size="10" fill="#2CA5E0" text-anchor="middle">Telegram</text>
+  
+  <rect x="170" y="145" width="75" height="20" rx="4" fill="#41299320" stroke="#412993" stroke-width="1"/>
+  <text x="207" y="159" font-family="Arial" font-size="10" fill="#9f7aea" text-anchor="middle">AI-Powered</text>
+  
+  <!-- Star count -->
+  <text x="360" y="35" font-family="Arial" font-size="12" fill="#FFD700" text-anchor="middle">⭐ 1</text>
+</svg>

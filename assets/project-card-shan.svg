@@ -1,0 +1,51 @@
+<svg width="400" height="180" viewBox="0 0 400 180" xmlns="http://www.w3.org/2000/svg">
+  <title>Shan - Modular Telegram AI Chatbot</title>
+  <defs>
+    <linearGradient id="sh-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117"/>
+      <stop offset="100%" style="stop-color:#161b22"/>
+    </linearGradient>
+    <linearGradient id="sh-glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD21E">
+        <animate attributeName="stop-color" values="#FFD21E;#FF9500;#FFD21E" dur="3s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" style="stop-color:#FF9500">
+        <animate attributeName="stop-color" values="#FF9500;#FFD21E;#FF9500" dur="3s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+    <filter id="sh-shadow">
+      <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#FFD21E" flood-opacity="0.4">
+        <animate attributeName="stdDeviation" values="6;10;6" dur="3s" repeatCount="indefinite"/>
+      </feDropShadow>
+    </filter>
+  </defs>
+  
+  <!-- Card Background -->
+  <rect x="2" y="2" width="396" height="176" rx="12" fill="url(#sh-bg)" stroke="url(#sh-glow)" stroke-width="2" filter="url(#sh-shadow)"/>
+  
+  <!-- Robot Icon -->
+  <g transform="translate(25, 20)">
+    <text x="20" y="28" font-size="28" text-anchor="middle">🤖</text>
+  </g>
+  
+  <!-- Title -->
+  <text x="75" y="40" font-family="'Segoe UI', Arial" font-size="20" font-weight="bold" fill="#ffffff">Shan</text>
+  
+  <!-- Subtitle -->
+  <text x="75" y="60" font-family="'Segoe UI', Arial" font-size="13" fill="#FFD21E">Modular Telegram AI Chatbot</text>
+  
+  <!-- Description -->
+  <text x="25" y="90" font-family="'Segoe UI', Arial" font-size="11" fill="#8b949e">🎨 Stylish font responses • 🔄 Auto fallback system</text>
+  <text x="25" y="108" font-family="'Segoe UI', Arial" font-size="11" fill="#8b949e">🔘 Model selection via Telegram buttons</text>
+  <text x="25" y="126" font-family="'Segoe UI', Arial" font-size="11" fill="#8b949e">📦 Modular architecture • 🚀 Deploy-ready</text>
+  
+  <!-- Tech badges -->
+  <rect x="25" y="145" width="60" height="20" rx="4" fill="#3776AB20" stroke="#3776AB" stroke-width="1"/>
+  <text x="55" y="159" font-family="Arial" font-size="10" fill="#3776AB" text-anchor="middle">Python</text>
+  
+  <rect x="95" y="145" width="85" height="20" rx="4" fill="#FFD21E20" stroke="#FFD21E" stroke-width="1"/>
+  <text x="137" y="159" font-family="Arial" font-size="10" fill="#FFD21E" text-anchor="middle">🤗 HuggingFace</text>
+  
+  <rect x="190" y="145" width="65" height="20" rx="4" fill="#2CA5E020" stroke="#2CA5E0" stroke-width="1"/>
+  <text x="222" y="159" font-family="Arial" font-size="10" fill="#2CA5E0" text-anchor="middle">Telegram</text>
+</svg>

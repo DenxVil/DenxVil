@@ -50,53 +50,78 @@
 
 ### ✨ Welcome to My Dynamic Profile ✨
 
+<img src="./assets/coding-animation.svg" alt="Coding Animation" width="400"/>
 
 </div>
 
----
+<div align="center">
+  <img src="./assets/animated-divider.svg" alt="Divider" width="100%"/>
+</div>
+
+<!-- Enhanced About Me Section -->
+<div align="center">
+  <img src="./assets/about-me-header.svg" alt="About Me" width="600"/>
+</div>
 
 ## 👨‍💻 About Me
 
-```javascript
-const denvil = {
-    name: "DenxVil",
-    title: "AI Engineer & Full Stack Developer",
-    location: "India 🇮🇳",
-    
-    currentFocus: [
-        "Advanced AI Systems",
-        "Telegram Bot Development", 
-        "Multi-Modal AI Integration",
-        "Full Stack Web Applications"
-    ],
-    
-    passions: [
-        "Creating Ultra-Human AI Assistants",
-        "Building Scalable Applications",
-        "Open Source Contributions",
-        "Continuous Learning"
-    ],
-    
-    askMeAbout: [
-        "AI/ML", "Python", "JavaScript", "TypeScript",
-        "React", "Node.js", "Telegram Bots", "MongoDB"
-    ]
+```typescript
+// 🚀 Welcome to my profile!
+interface Developer {
+  name: string;
+  title: string;
+  location: string;
+  currentFocus: string[];
+  passions: string[];
+  askMeAbout: string[];
+}
+
+const denvil: Developer = {
+  name: "DenxVil",
+  title: "AI Engineer & Full Stack Developer",
+  location: "India 🇮🇳",
+  
+  currentFocus: [
+    "🤖 Advanced AI Systems",
+    "📱 Telegram Bot Development", 
+    "🎯 Multi-Modal AI Integration",
+    "🌐 Full Stack Web Applications"
+  ],
+  
+  passions: [
+    "✨ Creating Ultra-Human AI Assistants",
+    "🏗️ Building Scalable Applications",
+    "🔓 Open Source Contributions",
+    "📚 Continuous Learning"
+  ],
+  
+  askMeAbout: [
+    "AI/ML 🧠", "Python 🐍", "JavaScript ⚡", "TypeScript 💙",
+    "React ⚛️", "Node.js 🟢", "Telegram Bots 🤖", "MongoDB 🍃"
+  ]
 };
+
+// Always coding, always learning! 💻✨
 ```
 
 <div align="center">
   
   ### 🎯 Currently Working On
   
-  🤖 **Advanced AI Systems** | 🌐 **Full Stack Applications** | 📱 **Telegram Bot Platforms**
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&pause=1000&color=00D9FF&center=true&vCenter=true&width=600&lines=🤖+Advanced+AI+Systems;🌐+Full+Stack+Applications;📱+Telegram+Bot+Platforms" alt="Currently Working On" />
   
 </div>
 
----
+<div align="center">
+  <img src="./assets/animated-divider.svg" alt="Divider" width="80%"/>
+</div>
 
 ## 🛠️ Tech Arsenal
 
 <div align="center">
+
+<!-- Animated header for Tech Arsenal -->
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&pause=1000&color=00D9FF&center=true&vCenter=true&width=400&lines=💻+Languages;⚡+Frameworks;🤖+AI+%26+ML;☁️+Cloud+%26+Tools" alt="Tech Stack" />
   
   ### 💻 Languages
   <img src="https://skillicons.dev/icons?i=python,javascript,typescript,html,css&theme=dark&perline=5" />
@@ -118,103 +143,85 @@ const denvil = {
   
 </div>
 
----
+<div align="center">
+  <img src="./assets/animated-divider.svg" alt="Divider" width="100%"/>
+</div>
 
 ## 🌟 Featured Projects
 
 <div align="center">
 
-### 🤖 AI-Powered Applications
+<!-- Animated typing for section header -->
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&pause=1000&color=00D9FF&center=true&vCenter=true&width=500&lines=🤖+AI-Powered+Applications;🚀+Building+the+Future" alt="Projects Header" />
 
 </div>
 
+<div align="center">
+  <img src="./assets/animated-divider.svg" alt="Divider" width="80%"/>
+</div>
+
+<!-- ⭐ FEATURED: Pulse Protector -->
+<div align="center">
+  
+### 🏥 Featured Project: Pulse Protector
+
+<a href="https://github.com/DenxVil/Pulse-Protector-">
+  <img src="./assets/pulse-protector-card.svg" alt="Pulse Protector - AI-Powered Trauma Assessment Pad" width="450"/>
+</a>
+
+[![Demo](https://img.shields.io/badge/🔴_Live_Demo-Visit_Now-ff4757?style=for-the-badge)](https://denxvil.github.io/Pulse-Protector-/)
+[![GitHub](https://img.shields.io/badge/GitHub-View_Source-100000?style=for-the-badge&logo=github)](https://github.com/DenxVil/Pulse-Protector-)
+
+**Smart Trauma Vitals Assessment Pad** - Real-time patient vitals monitoring with START triage protocol and intelligent clinical AI decision support.
+
+</div>
+
+<div align="center">
+  <img src="./assets/animated-divider.svg" alt="Divider" width="60%"/>
+</div>
+
+### 🤖 AI-Powered Applications
+
+<div align="center">
+
 <table>
 <tr>
-<td width="50%" valign="top">
+<td align="center" width="50%">
 
-#### 🧠 [Shan-D Superadvanced AI](https://github.com/DenxVil/Shan_D_Superadvanced)
-**Ultra-Human AI Assistant** ⵢɧαɳ-Đ
-
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?style=flat-square&logo=telegram&logoColor=white)
-![AI](https://img.shields.io/badge/AI-Powered-green?style=flat-square)
-
-🌟 **1 Star** | **Advanced AI Technology**
-
-**Features:**
-- 🎭 Ultra-Human conversation capabilities
-- 🧠 Emotional intelligence & deep learning
-- 📊 Complete user profiling & adaptation
-- 🌍 Strong cultural awareness (Indian context)
-- 🗣️ Multilingual support (English, Hindi+)
-- 💾 Advanced memory & continuous learning
-- 🔄 Multi-model AI integration (GPT-4, Claude, Gemini)
-- 📸 Multimodal capabilities (images, videos, audio)
+<a href="https://github.com/DenxVil/Shan_D_Superadvanced">
+  <img src="./assets/project-card-shan-d.svg" alt="Shan-D Superadvanced AI" width="400"/>
+</a>
 
 </td>
-<td width="50%" valign="top">
+<td align="center" width="50%">
 
-#### 🚀 [NexusAi](https://github.com/DenxVil/NexusAi)
-**Advanced AI Telegram Bot Platform**
+<a href="https://github.com/DenxVil/NexusAi">
+  <img src="./assets/project-card-nexusai.svg" alt="NexusAi" width="400"/>
+</a>
 
-![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white)
-![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB)
-![Node.js](https://img.shields.io/badge/Node.js-43853D?style=flat-square&logo=node.js&logoColor=white)
+[![Bot](https://img.shields.io/badge/Try_Bot-@NexusAiProbot-2CA5E0?style=flat-square&logo=telegram)](https://t.me/NexusAiProbot)
 
-**Bot:** [@NexusAiProbot](https://t.me/NexusAiProbot)
+</td>
+</tr>
+<tr>
+<td align="center" width="50%">
 
-**Features:**
-- 🔗 Sequential AI provider chain (Perplexity → Gemini → HuggingFace)
-- ✅ Response verification system
-- 🎯 Smart fallback mechanism
-- 🌐 Full-stack web interface (React + Node.js)
-- 📊 MongoDB integration
-- 🔐 Secure API management
-- ⚡ Real-time processing
-- 🐳 Docker & Azure deployment ready
+<a href="https://github.com/DenxVil/Shan">
+  <img src="./assets/project-card-shan.svg" alt="Shan" width="400"/>
+</a>
+
+</td>
+<td align="center" width="50%">
+
+<a href="https://github.com/DenxVil/Synapse">
+  <img src="./assets/project-card-synapse.svg" alt="Synapse" width="400"/>
+</a>
 
 </td>
 </tr>
 </table>
 
-<table>
-<tr>
-<td width="50%" valign="top">
-
-#### 🤖 [Shan](https://github.com/DenxVil/Shan)
-**Modular Telegram AI Chatbot**
-
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![HuggingFace](https://img.shields.io/badge/🤗_HuggingFace-FFD21E?style=flat-square)
-
-**Features:**
-- 🎨 Stylish font responses
-- 🔄 Auto fallback system
-- 🔘 Model selection via Telegram buttons
-- 📦 Modular architecture
-- 🚀 Deploy-ready (Heroku & Render)
-- 🌐 Multiple AI API integration
-
-</td>
-<td width="50%" valign="top">
-
-#### 🌐 [Synapse](https://github.com/DenxVil/Synapse)
-**Interactive Web Application**
-
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-
-**Features:**
-- 🎨 Modern UI/UX design
-- ⚡ Interactive frontend
-- 🐍 Python backend integration
-- 📱 Responsive design
-
-</td>
-</tr>
-</table>
+</div>
 
 <div align="center">
 
@@ -230,7 +237,9 @@ const denvil = {
 
 </div>
 
----
+<div align="center">
+  <img src="./assets/animated-divider.svg" alt="Divider" width="100%"/>
+</div>
 
 <!-- DYNAMIC_START -->
 ## 📊 Live GitHub Statistics
@@ -238,15 +247,15 @@ const denvil = {
 <div align="center">
   
   <a href="https://github.com/DenxVil">
-    <img height="180em" src="https://github-readme-stats.vercel.app/api?username=DenxVil&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&hide_border=true&bg_color=0d1117&title_color=00d9ff&icon_color=00d9ff&text_color=c9d1d9"/>
-    <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=DenxVil&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00d9ff&text_color=c9d1d9"/>
+    <img height="180em" src="https://github-readme-stats.vercel.app/api?username=DenxVil&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&hide_border=true&bg_color=0d1117&title_color=00d9ff&icon_color=00d9ff&text_color=c9d1d9&show=reviews,prs_merged,prs_merged_percentage"/>
+    <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=DenxVil&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00d9ff&text_color=c9d1d9&langs_count=8"/>
   </a>
   
 </div>
 
 <div align="center">
   
-  [![GitHub Streak](https://streak-stats.demolab.com/?user=DenxVil&theme=tokyonight)](https://git.io/streak-stats)
+  [![GitHub Streak](https://streak-stats.demolab.com/?user=DenxVil&theme=tokyonight&hide_border=true&background=0d1117&stroke=00d9ff&ring=00d9ff&fire=ff6b6b&currStreakNum=c9d1d9&sideNums=c9d1d9&currStreakLabel=00d9ff&sideLabels=00d9ff&dates=8b949e)](https://git.io/streak-stats)
   
 </div>
 
@@ -264,7 +273,9 @@ const denvil = {
   
 </div>
 
----
+<div align="center">
+  <img src="./assets/animated-divider.svg" alt="Divider" width="100%"/>
+</div>
 
 ## 🌟 Top Repositories
 
@@ -277,11 +288,17 @@ const denvil = {
     <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=DenxVil&repo=NexusAi&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00d9ff&icon_color=00d9ff" />
   </a>
   
+  <a href="https://github.com/DenxVil/Pulse-Protector-">
+    <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=DenxVil&repo=Pulse-Protector-&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00d9ff&icon_color=00d9ff" />
+  </a>
+  
 </div>
 
 <!-- DYNAMIC_END -->
 
----
+<div align="center">
+  <img src="./assets/animated-divider.svg" alt="Divider" width="100%"/>
+</div>
 
 ## 🎯 Current Focus & Goals
 
@@ -310,7 +327,9 @@ graph LR
 - 🚀 Scale existing projects to serve more users
 - 🎓 Master advanced machine learning techniques
 
----
+<div align="center">
+  <img src="./assets/animated-divider.svg" alt="Divider" width="100%"/>
+</div>
 
 ## 📫 Connect & Collaborate
 
@@ -336,7 +355,9 @@ graph LR
 
 </div>
 
----
+<div align="center">
+  <img src="./assets/animated-divider.svg" alt="Divider" width="100%"/>
+</div>
 
 <div align="center">
   
@@ -350,11 +371,11 @@ graph LR
   🎮 When not coding, you'll find me exploring new tech or gaming
   ```
   
-  ---
+  <img src="./assets/animated-divider.svg" alt="Divider" width="60%"/>
   
   <img src="https://raw.githubusercontent.com/platane/snk/output/github-contribution-grid-snake-dark.svg" width="100%">
   
-  ---
+  <img src="./assets/animated-divider.svg" alt="Divider" width="60%"/>
   
   ### 💝 Show Some Love
   
@@ -362,13 +383,13 @@ graph LR
   🍴 **Fork and contribute** to make them even better!  
   📢 **Share with others** who might benefit from these projects!
   
-  ---
+  <img src="./assets/animated-divider.svg" alt="Divider" width="40%"/>
   
-  **✨ "Building the future, one commit at a time" ✨**
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=00D9FF&center=true&vCenter=true&width=600&lines=✨+Building+the+future,+one+commit+at+a+time+✨" alt="Quote" />
   
   <sub>💡 **Always open to collaboration on exciting AI and full-stack projects!**</sub>
   
-  ---
+  <img src="./assets/animated-divider.svg" alt="Divider" width="30%"/>
   
   <sub>🤖 This profile features automated updates powered by GitHub Actions | Last updated: Daily at 00:00 UTC</sub>
   

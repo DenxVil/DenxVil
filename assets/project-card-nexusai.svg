@@ -1,0 +1,59 @@
+<svg width="400" height="180" viewBox="0 0 400 180" xmlns="http://www.w3.org/2000/svg">
+  <title>NexusAi - Advanced AI Telegram Bot Platform</title>
+  <defs>
+    <linearGradient id="na-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117"/>
+      <stop offset="100%" style="stop-color:#161b22"/>
+    </linearGradient>
+    <linearGradient id="na-glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#007ACC">
+        <animate attributeName="stop-color" values="#007ACC;#61DAFB;#007ACC" dur="3s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" style="stop-color:#61DAFB">
+        <animate attributeName="stop-color" values="#61DAFB;#007ACC;#61DAFB" dur="3s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+    <filter id="na-shadow">
+      <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#007ACC" flood-opacity="0.4">
+        <animate attributeName="stdDeviation" values="6;10;6" dur="3s" repeatCount="indefinite"/>
+      </feDropShadow>
+    </filter>
+    <style>
+      @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+    </style>
+  </defs>
+  
+  <!-- Card Background -->
+  <rect x="2" y="2" width="396" height="176" rx="12" fill="url(#na-bg)" stroke="url(#na-glow)" stroke-width="2" filter="url(#na-shadow)"/>
+  
+  <!-- Rocket Icon -->
+  <g transform="translate(25, 20)">
+    <text x="20" y="28" font-size="28" text-anchor="middle">🚀</text>
+  </g>
+  
+  <!-- Title -->
+  <text x="75" y="40" font-family="'Segoe UI', Arial" font-size="20" font-weight="bold" fill="#ffffff">NexusAi</text>
+  
+  <!-- Subtitle -->
+  <text x="75" y="60" font-family="'Segoe UI', Arial" font-size="13" fill="#61DAFB">Advanced AI Telegram Bot Platform</text>
+  
+  <!-- Bot link -->
+  <text x="25" y="85" font-family="'Segoe UI', Arial" font-size="11" fill="#00d9ff">🤖 @NexusAiProbot</text>
+  
+  <!-- Description -->
+  <text x="25" y="105" font-family="'Segoe UI', Arial" font-size="11" fill="#8b949e">🔗 Sequential AI chain (Perplexity → Gemini → HuggingFace)</text>
+  <text x="25" y="123" font-family="'Segoe UI', Arial" font-size="11" fill="#8b949e">✅ Response verification • 🎯 Smart fallback • 🐳 Docker ready</text>
+  
+  <!-- Tech badges -->
+  <rect x="25" y="145" width="75" height="20" rx="4" fill="#007ACC20" stroke="#007ACC" stroke-width="1"/>
+  <text x="62" y="159" font-family="Arial" font-size="10" fill="#007ACC" text-anchor="middle">TypeScript</text>
+  
+  <rect x="110" y="145" width="50" height="20" rx="4" fill="#61DAFB20" stroke="#61DAFB" stroke-width="1"/>
+  <text x="135" y="159" font-family="Arial" font-size="10" fill="#61DAFB" text-anchor="middle">React</text>
+  
+  <rect x="170" y="145" width="55" height="20" rx="4" fill="#43853D20" stroke="#43853D" stroke-width="1"/>
+  <text x="197" y="159" font-family="Arial" font-size="10" fill="#43853D" text-anchor="middle">Node.js</text>
+  
+  <rect x="235" y="145" width="60" height="20" rx="4" fill="#47A24820" stroke="#47A248" stroke-width="1"/>
+  <text x="265" y="159" font-family="Arial" font-size="10" fill="#47A248" text-anchor="middle">MongoDB</text>
+</svg>
