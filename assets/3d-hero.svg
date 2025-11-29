@@ -1,158 +1,96 @@
 <svg width="1200" height="400" viewBox="0 0 1200 400" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1" />
-      <stop offset="50%" style="stop-color:#16213e;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#0f3460;stop-opacity:1" />
+      <stop offset="0%" style="stop-color:#0d1117;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#161b22;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#21262d;stop-opacity:1" />
     </linearGradient>
     
-    <linearGradient id="text-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#00d9ff;stop-opacity:1" />
-      <stop offset="50%" style="stop-color:#5b86e5;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#36d1dc;stop-opacity:1" />
+    <linearGradient id="neon-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00d9ff">
+        <animate attributeName="stop-color" values="#00d9ff;#ff6b6b;#4ecdc4;#00d9ff" dur="4s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="50%" style="stop-color:#5b86e5">
+        <animate attributeName="stop-color" values="#5b86e5;#4ecdc4;#ff6b6b;#5b86e5" dur="4s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" style="stop-color:#36d1dc">
+        <animate attributeName="stop-color" values="#36d1dc;#00d9ff;#5b86e5;#36d1dc" dur="4s" repeatCount="indefinite"/>
+      </stop>
     </linearGradient>
     
-    <linearGradient id="accent-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#ff6b6b;stop-opacity:0.8" />
-      <stop offset="100%" style="stop-color:#4ecdc4;stop-opacity:0.8" />
-    </linearGradient>
-    
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+    <filter id="neon-glow">
+      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
       <feMerge>
+        <feMergeNode in="coloredBlur"/>
         <feMergeNode in="coloredBlur"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
     
-    <filter id="shadow">
-      <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
-      <feOffset dx="0" dy="4" result="offsetblur"/>
-      <feComponentTransfer>
-        <feFuncA type="linear" slope="0.5"/>
-      </feComponentTransfer>
-      <feMerge>
-        <feMergeNode/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-    
-    <!-- Animation for floating elements -->
     <style>
-      @keyframes float {
-        0%, 100% { transform: translateY(0px); }
-        50% { transform: translateY(-20px); }
-      }
-      
-      @keyframes rotate {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
-      }
-      
-      @keyframes pulse {
-        0%, 100% { opacity: 0.6; }
-        50% { opacity: 1; }
-      }
-      
-      .float-1 { animation: float 6s ease-in-out infinite; }
-      .float-2 { animation: float 8s ease-in-out infinite; }
-      .float-3 { animation: float 7s ease-in-out infinite; }
-      .rotate { animation: rotate 20s linear infinite; }
-      .pulse { animation: pulse 3s ease-in-out infinite; }
+      @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
+      @keyframes shimmer { 0% { filter: brightness(1); } 50% { filter: brightness(1.3); } 100% { filter: brightness(1); } }
+      @keyframes pulse { 0%, 100% { opacity: 0.3; } 50% { opacity: 0.8; } }
+      .float { animation: float 6s ease-in-out infinite; }
+      .shimmer { animation: shimmer 3s ease-in-out infinite; }
+      .pulse { animation: pulse 4s ease-in-out infinite; }
     </style>
   </defs>
   
-  <!-- Background -->
   <rect width="1200" height="400" fill="url(#bg-gradient)"/>
   
-  <!-- Grid pattern -->
-  <g opacity="0.1">
-    <line x1="0" y1="100" x2="1200" y2="100" stroke="#00d9ff" stroke-width="1"/>
-    <line x1="0" y1="200" x2="1200" y2="200" stroke="#00d9ff" stroke-width="1"/>
-    <line x1="0" y1="300" x2="1200" y2="300" stroke="#00d9ff" stroke-width="1"/>
-    <line x1="300" y1="0" x2="300" y2="400" stroke="#00d9ff" stroke-width="1"/>
-    <line x1="600" y1="0" x2="600" y2="400" stroke="#00d9ff" stroke-width="1"/>
-    <line x1="900" y1="0" x2="900" y2="400" stroke="#00d9ff" stroke-width="1"/>
+  <!-- Animated Grid -->
+  <g opacity="0.15">
+    <line x1="0" y1="100" x2="1200" y2="100" stroke="#00d9ff" stroke-width="0.5" class="pulse"/>
+    <line x1="0" y1="200" x2="1200" y2="200" stroke="#00d9ff" stroke-width="0.5" class="pulse" style="animation-delay: 1s"/>
+    <line x1="0" y1="300" x2="1200" y2="300" stroke="#00d9ff" stroke-width="0.5" class="pulse" style="animation-delay: 2s"/>
+    <line x1="200" y1="0" x2="200" y2="400" stroke="#00d9ff" stroke-width="0.5" class="pulse"/>
+    <line x1="400" y1="0" x2="400" y2="400" stroke="#00d9ff" stroke-width="0.5" class="pulse" style="animation-delay: 0.5s"/>
+    <line x1="600" y1="0" x2="600" y2="400" stroke="#00d9ff" stroke-width="0.5" class="pulse" style="animation-delay: 1s"/>
+    <line x1="800" y1="0" x2="800" y2="400" stroke="#00d9ff" stroke-width="0.5" class="pulse" style="animation-delay: 1.5s"/>
+    <line x1="1000" y1="0" x2="1000" y2="400" stroke="#00d9ff" stroke-width="0.5" class="pulse" style="animation-delay: 2s"/>
   </g>
   
-  <!-- 3D Geometric shapes (floating) -->
-  <g class="float-1" opacity="0.3">
-    <polygon points="150,80 180,60 210,80 210,120 180,140 150,120" 
-             fill="none" stroke="url(#accent-gradient)" stroke-width="2"/>
-    <polygon points="150,80 180,60 210,80 180,100" 
-             fill="url(#accent-gradient)" opacity="0.3"/>
-  </g>
+  <!-- Floating Particles -->
+  <circle class="float" cx="100" cy="80" r="4" fill="#00d9ff" opacity="0.6"/>
+  <circle class="float" cx="300" cy="350" r="3" fill="#ff6b6b" opacity="0.5" style="animation-delay: 1s"/>
+  <circle class="float" cx="500" cy="60" r="5" fill="#4ecdc4" opacity="0.4" style="animation-delay: 2s"/>
+  <circle class="float" cx="700" cy="340" r="3" fill="#5b86e5" opacity="0.6" style="animation-delay: 0.5s"/>
+  <circle class="float" cx="900" cy="90" r="4" fill="#00d9ff" opacity="0.5" style="animation-delay: 1.5s"/>
+  <circle class="float" cx="1100" cy="320" r="5" fill="#ff6b6b" opacity="0.4" style="animation-delay: 2.5s"/>
+  <circle class="float" cx="150" cy="280" r="3" fill="#4ecdc4" opacity="0.5" style="animation-delay: 3s"/>
+  <circle class="float" cx="1050" cy="120" r="4" fill="#5b86e5" opacity="0.6" style="animation-delay: 0.8s"/>
   
-  <g class="float-2" opacity="0.3">
-    <polygon points="1000,100 1030,80 1060,100 1060,140 1030,160 1000,140" 
-             fill="none" stroke="#36d1dc" stroke-width="2"/>
-    <polygon points="1000,100 1030,80 1060,100 1030,120" 
-             fill="#36d1dc" opacity="0.3"/>
-  </g>
+  <!-- Decorative Hexagons -->
+  <polygon points="80,200 95,185 125,185 140,200 125,215 95,215" fill="none" stroke="#00d9ff" stroke-width="1" opacity="0.3" class="pulse"/>
+  <polygon points="1060,200 1075,185 1105,185 1120,200 1105,215 1075,215" fill="none" stroke="#00d9ff" stroke-width="1" opacity="0.3" class="pulse" style="animation-delay: 1s"/>
   
-  <g class="float-3" opacity="0.2">
-    <circle cx="950" cy="320" r="30" fill="none" stroke="#ff6b6b" stroke-width="2"/>
-    <circle cx="950" cy="320" r="20" fill="none" stroke="#ff6b6b" stroke-width="1"/>
-  </g>
+  <!-- Main Name -->
+  <text x="600" y="170" font-family="'Arial Black', 'Helvetica Neue', sans-serif" font-size="90" 
+        font-weight="900" text-anchor="middle" fill="url(#neon-gradient)" 
+        filter="url(#neon-glow)" class="shimmer">DenxVil</text>
   
-  <!-- Rotating orbit -->
-  <g class="rotate" opacity="0.15">
-    <circle cx="600" cy="200" r="150" fill="none" stroke="#00d9ff" stroke-width="1" stroke-dasharray="5,5"/>
-    <circle cx="750" cy="200" r="8" fill="#00d9ff" filter="url(#glow)"/>
-  </g>
-  
-  <!-- Pulsing dots -->
-  <circle class="pulse" cx="250" cy="300" r="5" fill="#4ecdc4" filter="url(#glow)"/>
-  <circle class="pulse" cx="950" cy="150" r="5" fill="#ff6b6b" filter="url(#glow)"/>
-  
-  <!-- Main 3D Text Container -->
-  <g filter="url(#shadow)">
-    <!-- "DenxVil" Text with 3D effect -->
-    <text x="600" y="160" font-family="'Arial Black', sans-serif" font-size="72" 
-          font-weight="bold" text-anchor="middle" fill="#0f1419">DenxVil</text>
-    <text x="598" y="158" font-family="'Arial Black', sans-serif" font-size="72" 
-          font-weight="bold" text-anchor="middle" fill="#1a1a2e">DenxVil</text>
-    <text x="596" y="156" font-family="'Arial Black', sans-serif" font-size="72" 
-          font-weight="bold" text-anchor="middle" fill="url(#text-gradient)" 
-          filter="url(#glow)">DenxVil</text>
-  </g>
-  
-  <!-- Subtitle -->
-  <text x="600" y="220" font-family="'Courier New', monospace" font-size="24" 
+  <!-- Subtitle with code styling -->
+  <text x="600" y="235" font-family="'Fira Code', 'Consolas', monospace" font-size="26" 
         text-anchor="middle" fill="#00d9ff" opacity="0.9">
-    AI Engineer &amp; Full Stack Developer
+    &lt;AI Engineer /&gt; &amp; &lt;Full Stack Developer /&gt;
   </text>
   
-  <!-- Accent line -->
-  <line x1="350" y1="240" x2="850" y2="240" stroke="url(#accent-gradient)" 
-        stroke-width="2" opacity="0.6"/>
+  <!-- Animated Underline -->
+  <rect x="300" y="255" width="600" height="3" rx="2" fill="url(#neon-gradient)" opacity="0.8">
+    <animate attributeName="width" values="0;600" dur="1.5s" fill="freeze"/>
+  </rect>
   
   <!-- Tagline -->
-  <text x="600" y="280" font-family="'Arial', sans-serif" font-size="18" 
-        text-anchor="middle" fill="#a0a0a0" letter-spacing="2">
-    Building the Future, One Commit at a Time
+  <text x="600" y="310" font-family="'Segoe UI', Arial, sans-serif" font-size="20" 
+        text-anchor="middle" fill="#8b949e" letter-spacing="2">
+    🚀 Building Intelligent Solutions for Tomorrow 🚀
   </text>
   
-  <!-- Decorative corner elements -->
-  <g opacity="0.4">
-    <polyline points="50,50 50,30 70,30" fill="none" stroke="#00d9ff" stroke-width="2"/>
-    <polyline points="1150,50 1150,30 1130,30" fill="none" stroke="#00d9ff" stroke-width="2"/>
-    <polyline points="50,350 50,370 70,370" fill="none" stroke="#36d1dc" stroke-width="2"/>
-    <polyline points="1150,350 1150,370 1130,370" fill="none" stroke="#36d1dc" stroke-width="2"/>
-  </g>
-  
-  <!-- Tech stack icons representation -->
-  <g opacity="0.3" transform="translate(150, 320)">
-    <rect width="15" height="15" rx="2" fill="#4ecdc4"/>
-    <rect x="25" width="15" height="15" rx="2" fill="#ff6b6b"/>
-    <rect x="50" width="15" height="15" rx="2" fill="#00d9ff"/>
-    <rect x="75" width="15" height="15" rx="2" fill="#ffa502"/>
-  </g>
-  
-  <g opacity="0.3" transform="translate(1000, 320)">
-    <rect width="15" height="15" rx="2" fill="#4ecdc4"/>
-    <rect x="25" width="15" height="15" rx="2" fill="#ff6b6b"/>
-    <rect x="50" width="15" height="15" rx="2" fill="#00d9ff"/>
-    <rect x="75" width="15" height="15" rx="2" fill="#ffa502"/>
+  <!-- Tech icons row -->
+  <g transform="translate(600, 360)" text-anchor="middle">
+    <text font-size="14" fill="#c9d1d9" letter-spacing="8">
+      Python • JavaScript • React • AI/ML • Node.js • MongoDB
+    </text>
   </g>
 </svg>

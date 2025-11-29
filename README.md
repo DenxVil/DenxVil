@@ -1,3 +1,5 @@
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:1a1a2e,50:0f3460,100:00d9ff&height=200&section=header&text=DenxVil&fontSize=80&fontColor=ffffff&animation=fadeIn&fontAlignY=35&desc=AI%20Engineer%20%26%20Full%20Stack%20Developer&descAlignY=55&descSize=20"/>
+
 <div align="center">
   
   <!-- 3D Hero Banner -->
@@ -7,11 +9,6 @@
   <p>
     <a href="https://github.com/DenxVil">
       <img src="https://img.shields.io/badge/GitHub-PRO-6e5494?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Pro Badge" />
-    </a>
-  </p>
-  <p>
-    <a href="https://github.com/DenxVil">
-      <img src="./assets/pro-badge.svg" alt="GitHub Pro" height="35" />
     </a>
   </p>
   
@@ -35,6 +32,16 @@
   
   <!-- Typing Animation -->
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=00D9FF&center=true&vCenter=true&width=600&lines=AI+Engineer+%26+Full+Stack+Developer;Building+Intelligent+AI+Solutions;Creating+Amazing+User+Experiences;Open+Source+Contributor;Always+Learning+%26+Growing" alt="Typing Animation - AI Engineer & Full Stack Developer" />
+  
+</div>
+
+---
+
+<div align="center">
+  
+  ## 🏆 GitHub Achievements
+  
+  <img src="https://github-profile-trophy.vercel.app/?username=DenxVil&theme=algolia&no-frame=true&no-bg=true&column=7&margin-w=5&margin-h=5" />
   
 </div>
 
@@ -88,41 +95,28 @@ const denvil = {
 
 ---
 
-## 🛠️ Tech Stack & Skills
+## 🛠️ Tech Arsenal
 
 <div align="center">
-
-### Programming Languages
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-
-### Frameworks & Libraries
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
-![Express.js](https://img.shields.io/badge/Express.js-404D59?style=for-the-badge)
-![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
-
-### AI & Machine Learning
-![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white)
-![HuggingFace](https://img.shields.io/badge/🤗_Hugging_Face-FFD21E?style=for-the-badge)
-![Google Gemini](https://img.shields.io/badge/Google_Gemini-4285F4?style=for-the-badge&logo=google&logoColor=white)
-
-### Databases & Cloud
-![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![Azure](https://img.shields.io/badge/Microsoft_Azure-0089D0?style=for-the-badge&logo=microsoft-azure&logoColor=white)
-![Heroku](https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white)
-
-### Tools & Platforms
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)
-![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)
-![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
-
+  
+  ### 💻 Languages
+  <img src="https://skillicons.dev/icons?i=python,javascript,typescript,html,css&theme=dark&perline=5" />
+  
+  ### ⚡ Frameworks & Libraries
+  <img src="https://skillicons.dev/icons?i=react,nodejs,express,vite,tailwind&theme=dark&perline=5" />
+  
+  ### 🤖 AI & ML
+  <img src="https://skillicons.dev/icons?i=tensorflow,pytorch&theme=dark" />
+  <img src="https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white" />
+  <img src="https://img.shields.io/badge/🤗_Hugging_Face-FFD21E?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Google_Gemini-4285F4?style=for-the-badge&logo=google&logoColor=white" />
+  
+  ### 🗄️ Databases & Cloud
+  <img src="https://skillicons.dev/icons?i=mongodb,docker,azure,heroku,vercel&theme=dark&perline=5" />
+  
+  ### 🔧 Tools
+  <img src="https://skillicons.dev/icons?i=git,github,vscode,linux,bash&theme=dark&perline=5" />
+  
 </div>
 
 ---
@@ -244,8 +238,10 @@ const denvil = {
 
 <div align="center">
   
-  <img src="./assets/stats.svg" alt="GitHub Statistics - Commits, Repos, Followers" />
-  <img src="./assets/top-langs.svg" alt="Top Programming Languages" />
+  <a href="https://github.com/DenxVil">
+    <img height="180em" src="https://github-readme-stats.vercel.app/api?username=DenxVil&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&hide_border=true&bg_color=0d1117&title_color=00d9ff&icon_color=00d9ff&text_color=c9d1d9"/>
+    <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=DenxVil&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00d9ff&text_color=c9d1d9"/>
+  </a>
   
 </div>
 
@@ -261,14 +257,27 @@ const denvil = {
   
 </div>
 
+<div align="center">
+  
+  ### 💭 Random Dev Quote
+  
+  ![Quote](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight)
+  
+</div>
+
 ---
 
 ## 🌟 Top Repositories
 
 <div align="center">
-
-*Top repositories will be dynamically updated by the GitHub Actions workflow*
-
+  
+  <a href="https://github.com/DenxVil/Shan_D_Superadvanced">
+    <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=DenxVil&repo=Shan_D_Superadvanced&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00d9ff&icon_color=00d9ff" />
+  </a>
+  <a href="https://github.com/DenxVil/NexusAi">
+    <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=DenxVil&repo=NexusAi&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00d9ff&icon_color=00d9ff" />
+  </a>
+  
 </div>
 
 <!-- DYNAMIC_END -->
@@ -295,7 +304,7 @@ graph LR
 
 </div>
 
-### 🎯 2024 Goals
+### 🎯 2025 Goals
 - 🤖 Launch next-generation AI assistant with multimodal capabilities
 - 🌐 Build comprehensive AI platform with web interface
 - 📚 Contribute to open-source AI/ML projects
@@ -321,9 +330,9 @@ graph LR
 
 ### 📅 Recent Highlights
 
-🎉 **2024** - Launched multiple AI-powered Telegram bots  
-🚀 **2024** - Built full-stack applications with modern tech stack  
-🤖 **2024** - Developed advanced AI assistant with multimodal capabilities  
+🎉 **2025** - Launched multiple AI-powered Telegram bots  
+🚀 **2025** - Built full-stack applications with modern tech stack  
+🤖 **2025** - Developed advanced AI assistant with multimodal capabilities  
 💼 **Active** - Contributing to open-source AI/ML projects
 
 </div>
@@ -367,3 +376,5 @@ graph LR
   ![](https://komarev.com/ghpvc/?username=DenxVil&color=blueviolet&style=flat-square&label=Thanks+for+visiting!)
   
 </div>
+
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:00d9ff,50:0f3460,100:1a1a2e&height=120&section=footer&animation=twinkling"/>
