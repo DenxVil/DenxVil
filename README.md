@@ -120,13 +120,9 @@ const denvil = {
 
 ---
 
-## 🌟 Featured Projects
+## 🌟 Featured Projects & AI Applications
 
-<div align="center">
-
-### 🤖 AI-Powered Applications
-
-</div>
+<div align="center"></div>
 
 <table>
 <tr>
@@ -349,10 +345,6 @@ graph LR
   ☕ Powered by coffee and curiosity
   🎮 When not coding, you'll find me exploring new tech or gaming
   ```
-  
-  ---
-  
-  <img src="https://raw.githubusercontent.com/platane/snk/output/github-contribution-grid-snake-dark.svg" width="100%">
   
   ---
   
