@@ -122,8 +122,6 @@ const denvil = {
 
 ## 🌟 Featured Projects & AI Applications
 
-<div align="center"></div>
-
 <table>
 <tr>
 <td width="50%" valign="top">
